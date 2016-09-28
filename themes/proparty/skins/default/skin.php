@@ -119,7 +119,7 @@ if (!function_exists('axiom_skin_theme_setup_education')) {
 if (!function_exists('axiom_filter_used_fonts_education')) {
 	//add_filter('axiom_filter_used_fonts', 'axiom_filter_used_fonts_education');
 	function axiom_filter_used_fonts_education($theme_fonts) {
-		$theme_fonts['Lora'] = 1;
+		$theme_fonts['Raleway'] = 1;
 		$theme_fonts['Montserrat'] = 1;
 		$theme_fonts['Merriweather'] = 1;
 		return $theme_fonts;
@@ -167,7 +167,7 @@ if (!function_exists('axiom_action_add_styles_education')) {
 if (!function_exists('axiom_filter_add_styles_inline_education')) {
 	//add_filter('axiom_filter_add_styles_inline', 'axiom_filter_add_styles_inline_education');
 	function axiom_filter_add_styles_inline_education($custom_style) {
-	
+
 		// Color scheme
 		$scheme = axiom_get_custom_option('color_scheme');
 		if (empty($scheme)) $scheme = 'original';
@@ -743,7 +743,7 @@ a:hover {
 
 			';
 		}
-		
+
 		// Menu dark color
 		$clr_dark = axiom_get_custom_option('menu_dark');
 		if (empty($clr_dark) && $scheme!= 'original')	$clr_dark = apply_filters('axiom_filter_get_menu_dark', '');
@@ -822,7 +822,7 @@ if (!function_exists('axiom_action_add_responsive_education')) {
 if (!function_exists('axiom_filter_add_responsive_inline_education')) {
 	//add_filter('axiom_filter_add_responsive_inline', 'axiom_filter_add_responsive_inline_education');
 	function axiom_filter_add_responsive_inline_education($custom_style) {
-		return $custom_style;	
+		return $custom_style;
 	}
 }
 
