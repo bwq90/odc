@@ -510,6 +510,45 @@ function sm_meta_save( $post_id ) {
 }
 add_action( 'save_post', 'sm_meta_save' );
 
+function sm_upcoming_meta() {
+    add_meta_box( 'sm_meta', __( 'Upcoming Resource', 'sm-textdomain' ), 'sm_upcoming_callback', 'resource' );
+}
+function sm_upcoming_callback( $post ) {
+    $upcoming = get_post_meta( $post->ID );
+    ?>
+	<p>
+    <div class="sm-row-content">
+        <label for="meta-upcoming">
+            <input type="checkbox" name="meta-upcoming" id="meta-upcoming" value="yes" <?php if ( isset ( $upcoming['meta-upcoming'] ) ) checked( $upcoming['meta-upcoming'][0], 'yes' ); ?> />
+            <?php _e( 'Upcoming Resource', 'sm-textdomain' ); ?>
+        </label>
+        
+    </div>
+</p>
+    <?php
+}
+add_action( 'add_meta_boxes', 'sm_upcoming_meta' );
+
+function sm_upcoming_save( $post_id ) {
+    // Checks save status
+    $is_autosave = wp_is_post_autosave( $post_id );
+    $is_revision = wp_is_post_revision( $post_id );
+    $is_valid_nonce = ( isset( $_POST[ 'sm_nonce' ] ) && wp_verify_nonce( $_POST[ 'sm_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
+ 
+    // Exits script depending on save status
+    if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
+        return;
+    }
+
+	// Checks for input and saves
+	if( isset( $_POST[ 'meta-upcoming' ] ) ) {
+	    update_post_meta( $post_id, 'meta-upcoming', 'yes' );
+	} else {
+	    update_post_meta( $post_id, 'meta-upcoming', '' );
+	}
+}
+add_action( 'save_post', 'sm_upcoming_save' );
+
 function sm_link_meta() {
     add_meta_box( 'sm_link', __( 'Document Link', 'sm-textdomain' ), 'sm_link_callback', 'resource' );
 }
