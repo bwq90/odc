@@ -56,6 +56,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
                                             <p class="info-link"><a href="<?php echo the_permalink(); ?>">Read more</a></p>
                                         </div>
                                     </div>
+                                    <span class="contribution-tag">Open<br />for<br />comments</span>
                                 </div>
                             </div>
                             <?php if ( ++$i % 3 == 0 ) : ?>
