@@ -3425,7 +3425,7 @@ footer.twitter_wrap .sc_section_overlay {
 /* Copyright area */
 .copyright_wrap {
     background: #f6f6f6;
-    border-top: 1px solid #303030;
+    border-top: 0px solid #303030;
     color: #696969;
     font:300 11px/54px 'times';
     padding: 0;
