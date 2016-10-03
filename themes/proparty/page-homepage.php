@@ -64,6 +64,8 @@
 	                'category_name'    => '',
 	                'orderby'          => 'date',
 	                'order'            => 'DESC',
+									'meta_key'         => 'meta-featured',
+									'meta_value'       => 'yes',
 	                'post_type'        => 'resource',
 	                'post_status'      => 'publish',
 	                'suppress_filters' => true
