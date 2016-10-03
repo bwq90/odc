@@ -268,7 +268,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
                             <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( 'medium', array( 'class' => '[ wp-post-image ]' ) ); ?></a>
                             <h4 class="[ post__title ]">
                                 <a href="<?php echo the_permalink(); ?>"><?php echo get_the_title(); ?></a>
-                                <span class="resource-date"><?php echo get_the_date(); ?></span>
+                                <div class="resource-date"><?php echo get_the_date('M.j.Y'); ?></div>
                             </h4>
                             <p class="resource-author">by <?php echo get_post_meta( get_the_ID(), 'meta-author', true ); ?></p>
                             <div class="metadata">
