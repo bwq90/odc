@@ -4812,8 +4812,10 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .resource-centre-results__section .resource-result > .inner > .contribution-tag                     { display: none; width: 80px; height: 68px; padding-top: 12px; background-color: #00b9f2; font-family: 'Montserrat'; font-size: 10px; line-height: 18px; color: #fff; text-transform: uppercase; text-align: center; border-radius: 50%; position: absolute; right: 20px; top: 20px; }
 .resource-centre-results__section .resource-result.yes-contribution > .inner > .contribution-tag    { display: block; }
 .resource-centre-results__section .resource-result.upcoming-resource                                { pointer-events: none; }
-.resource-centre-results__section .resource-result > .inner > .upcoming-tag                         { display: none; width: 80px; height: 55px; padding-top: 25px; background-color: #FF4545; font-family: 'Montserrat'; font-size: 10px; line-height: 18px; color: #C2C3C6; text-transform: uppercase; text-align: center; border-radius: 50%; position: absolute; right: 20px; top: 20px; }
+.resource-centre-results__section .resource-result > .inner > .upcoming-tag                         { display: none; width: 80px; height: 55px; padding-top: 25px; background-color: #FF4545; font-family: 'Montserrat'; font-size: 10px; line-height: 18px; color: #fff; text-transform: uppercase; text-align: center; border-radius: 50%; position: absolute; right: 20px; top: 20px; }
+.resource-centre-results__section .resource-result > .upcoming-bg                                   { background-color: #f6f6f6; color: #C2C3C6 !important; }
 .resource-centre-results__section .resource-result.upcoming-resource > .inner > .upcoming-tag       { display: block; }
+
 .resource-centre-results__section .resource-result > .inner > h4,
 .resource-centre-results__section .resource-result > .inner > .metadata                             { padding: 10px 20px; }
 .resource-centre-results__section .resource-result > .inner > h4                                    { padding: 0 20px; margin-bottom: 5px; line-height: 20px; }
@@ -4825,3 +4827,11 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .resource-centre-results__section .resource-result > .inner > .metadata .info .info-link            { margin-bottom: 0; color: #c3c3c3; font-family: 'Raleway'; font-size: 10px; line-height: 1.5em; }
 .resource-centre-results__section .resource-result > .inner > .metadata .info .info-link > a        { color: #00b9f2; }
 .resource-centre-results__section .resource-result > .inner > .metadata .info .info-data            { color: #333; font-size: 11px; font-family: "Raleway"; }
+
+.resource-centre-results__section .resource-result > .upcoming-bg > .resource-date,
+.resource-centre-results__section .resource-result > .upcoming-bg > h4 > a,
+.resource-centre-results__section .resource-result > .upcoming-bg > .metadata .info .info-title,
+.resource-centre-results__section .resource-result > .upcoming-bg > .metadata .info .info-data,
+.resource-centre-results__section .resource-result > .upcoming-bg > .metadata .info .info-link,
+.resource-centre-results__section .resource-result > .upcoming-bg > .metadata .info .info-link > a,
+.resource-centre-results__section .resource-result > .upcoming-bg > .metadata .info .info-data            { color: #C2C3C6;}

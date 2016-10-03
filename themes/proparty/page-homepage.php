@@ -4,9 +4,9 @@
 <div class="sc_gap_home">
 	<div class="content_wrap content_home">
 		<h1 style="margin-top:25px;margin-bottom:25px;">Principles</h1>
-		
+
 		<!-- Principales nuevos -->
-		
+
 		<div class="caja-principal">
 		   	<a href="<?php echo site_url('/'); ?>principles/">
 		   		<img class="candado" src="<?php echo site_url('/'); ?>wp-content/uploads/2015/04/unlock-278x300.png" alt="">
@@ -68,7 +68,7 @@
 	            );
 
 	            $posts_array = query_posts( $args );
-	            if ( !empty($posts_array) ) : 
+	            if ( !empty($posts_array) ) :
 	                $i  = j;
 	                foreach ( $posts_array as  $post ) :
 	                    setup_postdata( $post );
@@ -84,7 +84,7 @@
 	                            <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( 'medium', array( 'class' => '[ wp-post-image ]' ) ); ?></a>
 	                            <h4 class="[ post__title ]">
 	                                <a href="<?php echo the_permalink(); ?>"><?php echo get_the_title(); ?></a>
-	                                <span class="resource-date"><?php echo get_the_date(); ?></span>
+	                                <span class="resource-date"><?php echo get_the_date('M.j.Y'); ?></span>
 	                            </h4>
 	                            <p class="resource-author">by <?php echo get_post_meta( get_the_ID(), 'meta-author', true ); ?></p>
 	                            <div class="metadata">
@@ -103,7 +103,7 @@
 	                    <?php endif; ?>
 	                <?php endforeach; ?>
 	                <div style="text-align: center;">
-	                    <a class="sc_button sc_button_square sc_button_style_filled sc_button_bg_user sc_button_size_medium" style="margin: 40px 4px 0 4px; transition: all 0.2s ease-out 0s; display: inline-block;" href="resource-centre-results/">RESOURCE CENTER</a>
+	                    <a class="sc_button sc_button_square sc_button_style_filled sc_button_bg_user sc_button_size_medium" style="margin: 40px 4px 0 4px; transition: all 0.2s ease-out 0s; display: inline-block;" href="resource-centre-results/">RESOURCE CENTRE</a>
 	                </div>
 	            <?php endif; ?>
 	        </article>
@@ -114,9 +114,9 @@
 	<div class="content_wrap">
 		<h1 style="margin-top:25px;margin-bottom:25px;">Newsfeed</h1>
 		<?php $news = new WP_Query(array( 'posts_per_page' => 3, 'post_type' => array('post'), 'cat' => 30 ) );
-		if ( $news->have_posts() ) : 
+		if ( $news->have_posts() ) :
 			while( $news->have_posts() ) : $news->the_post();
-				$date = getDateTransform($post->post_date); ?>			
+				$date = getDateTransform($post->post_date); ?>
 				<div class="content_home_newsfeed">
 					<a href="<?php the_permalink(); ?>">
 						<?php if ( has_post_thumbnail() ):
@@ -130,9 +130,9 @@
 
 					</a>
 				</div>
-				<?php $postCounter++; 
-			endwhile; 	
-		endif; 
+				<?php $postCounter++;
+			endwhile;
+		endif;
 		wp_reset_query(); ?>
 	</div>
 </div>
