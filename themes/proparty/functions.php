@@ -511,7 +511,7 @@ function sm_meta_save( $post_id ) {
 add_action( 'save_post', 'sm_meta_save' );
 
 function sm_upcoming_meta() {
-    add_meta_box( 'sm_meta', __( 'Upcoming Resource', 'sm-textdomain' ), 'sm_upcoming_callback', 'resource' );
+    add_meta_box( 'sm_upcoming', __( 'Upcoming Resource', 'sm-textdomain' ), 'sm_upcoming_callback', 'resource' );
 }
 function sm_upcoming_callback( $post ) {
     $upcoming = get_post_meta( $post->ID );
