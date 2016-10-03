@@ -43,12 +43,9 @@
 		   		<h5>6. For Inclusive Development and Innovation</h5>
 		   	</a>
 		</div>
-		<div style="text-align: center;">
-			<a class="btn btn-contribute" href="/adopt-the-charter/">ADOPT THE CHARTER</a>
-			<!-- <a class="sc_button sc_button_square sc_button_style_filled sc_button_bg_user sc_button_size_medium" style="margin: 40px 4px 0 4px; transition: all 0.2s ease-out 0s; display: inline-block;" href="/adopt-the-charter/">ADOPT THE CHARTER</a> -->
-			<!-- <a class="sc_button sc_button_square sc_button_style_filled sc_button_bg_user sc_button_size_medium" style="margin: 40px 4px 0 4px; transition: all 0.2s ease-out 0s; display: inline-block; color: #ffffff; background-color: #2b3242; border-color: #2b3242;" href="https://docs.google.com/document/d/1bFD4xtK7NaHKgxYCIXHNlCjuUCLNFkrK0FVXewe4xYg/edit?usp=sharing" target="_blank">Collaborate</a> -->
-			<!-- <a class="sc_button sc_button_square sc_button_style_filled sc_button_bg_user sc_button_size_large" style="margin: 40px 4px 0 4px; transition: all 0.2s ease-out 0s; display: inline-block;" href="#thisisthevideoid">WATCH VIDEO</a> -->
-		</div>
+	</div>
+	<div style="text-align: center;">
+		<a class="btn btn-resource-centre" href="/adopt-the-charter/">ADOPT THE CHARTER</a>
 	</div>
 </div>
 <div class="sc_resources_home">
@@ -107,11 +104,11 @@
 	                        <article class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ]">
 	                    <?php endif; ?>
 	                <?php endforeach; ?>
-	                <div style="text-align: center;">
-	                    <a class="sc_button sc_button_square sc_button_style_filled sc_button_bg_user sc_button_size_medium" style="margin: 40px 4px 0 4px; transition: all 0.2s ease-out 0s; display: inline-block;" href="resource-centre-results/">RESOURCE CENTRE</a>
-	                </div>
 	            <?php endif; ?>
 	        </article>
+					<div style="text-align: center;">
+							<a class="btn btn-resource-centre" href="resource-centre-results/">RESOURCE CENTRE</a>
+					</div>
 	    </section>
     </div>
 </div>

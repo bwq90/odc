@@ -4756,6 +4756,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 /*******************************
     Resource Centre Results
 *******************************/
+.btn-resource-centre                { display: block; width: 200px; margin: 40px auto 0; padding: 10px 25px; background-color: #00b9f2; font-family: 'Montserrat'; font-size: 14px; text-align: center; color: #fff; text-transform: uppercase; border-radius: 5px; }
 .sc_resources_home                  { margin-top: 30px; }
 #featured-resources                 { width: 5000px; margin-top: -60px; margin-bottom: 30px; padding-top: 30px; padding-bottom: 50px; background-color: #f6f6f6; position: relative; left: 50%; transform: translateX(-50%); }
 #featured-resources .btn-contribute { display: block; width: 150px; margin: 40px auto 0; padding: 10px 25px; background-color: #00b9f2; font-family: 'Montserrat'; font-size: 14px; text-align: center; color: #fff; text-transform: uppercase; border-radius: 5px; }
