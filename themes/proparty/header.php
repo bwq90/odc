@@ -172,10 +172,10 @@ $video_bg_show  = axiom_get_custom_option('show_video_bg')=='yes' && (axiom_get_
 				$show_title = axiom_get_custom_option('show_page_title')=='yes';
 				$show_breadcrumbs = axiom_get_custom_option('show_breadcrumbs')=='yes';
 				?>
-				<div class="page_top_wrap<?php echo ($show_title ? ' page_top_title' : '') . ($show_breadcrumbs ? ' page_top_breadcrumbs' : ''); ?>"<?php echo ($header_style); ?>>
+				<div class="page_top_wrap page_top_title<?php echo ($show_breadcrumbs ? ' page_top_breadcrumbs' : ''); ?>"<?php echo ($header_style); ?>>
 					<div class="content_wrap">
 						<?php if ($show_breadcrumbs) { ?>
-							<div class="breadcrumbs <?php if ( is_page( 'resource-centre-results' ) ) echo "left-aligned" ?>">
+							<div class="breadcrumbs left-aligned">
 								<?php if (!is_404()) axiom_show_breadcrumbs(); ?>
 							</div>
 						<?php } ?>
