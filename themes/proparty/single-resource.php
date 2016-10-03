@@ -1,4 +1,4 @@
-<?php 
+<?php
     global $post;
     get_header();
 ?>
@@ -12,7 +12,7 @@
                 </section>
                 <section class="post_content" itemprop="articleBody">
                     <h1><?php the_title(); ?></h1>
-                    <p class="resource-post-author">by <?php the_author(); ?></p>
+                    <p class="resource-post-author">by <?php echo get_post_meta( get_the_ID(), 'meta-author', true ); ?></p>
                     <?php the_content(); ?>
                     <a href="<?php echo get_post_meta( get_the_ID(), 'meta-link', true ); ?>" class="doc-link" target="_blank">Go to resource</a>
                     <h3>Comments</h3>
@@ -29,7 +29,7 @@
             <p><?php echo get_themes_and_topics( $post->ID ); ?></p>
             <h5 class="sc_title sc_title_regular sc_align_center [ no-margin ]">Date</h5>
             <p class="resource-post-date"><?php echo get_the_date(); ?></p>
-            <?php $open = get_post_meta( get_the_ID(), '_open_contribution_meta', true ); 
+            <?php $open = get_post_meta( get_the_ID(), '_open_contribution_meta', true );
             if ( $open == 'yes' ) : ?>
                 <a href="<?php echo get_post_meta( get_the_ID(), 'meta-link', true ); ?>" class="doc-link" target="_blank">Comment</a>
             <?php endif; ?>
@@ -38,9 +38,9 @@
             <section class="[ column-12_12 column sc_column_item ][ resource-centre-results__section ]">
                 <?php $group_active = isset($_POST['group']) ? $_POST['group'] : 'ninguno'; ?>
                 <article class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ]">
-                    <?php 
+                    <?php
                     $query_resources = getResources($search, 3);
-                    if ( ! empty($query_resources) ) : 
+                    if ( ! empty($query_resources) ) :
                         $i  = 0; ?>
                         <h3 class="resources-widget-title">Similar Resources</h3>
                         <?php foreach ( $query_resources as  $post ) :

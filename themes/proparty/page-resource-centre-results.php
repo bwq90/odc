@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php 
+<?php
 $page_size = 9;
 $resources_page = ( isset( $_GET['resources_page'] ) ) ? ( int ) $_GET['resources_page'] : 1;
 $search = isset($_GET['search-resources']) ? $_GET['search-resources'] : '';
@@ -13,7 +13,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
 ?>
 <section id="featured-resources">
     <div class="inner">
-        <h1 class="page-title-big">Resource Center</h1>
+        <h1 class="page-title-big">Resource Centre</h1>
         <section class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ][ resource-centre-results ]">
             <section class="[ column-12_12 column sc_column_item ][ resource-centre-results__section ]">
                 <h3>Featured resources</h3>
@@ -31,7 +31,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
                         'suppress_filters' => true
                     );
                     $posts_array = get_posts( $args );
-                    if ( ! empty($posts_array) ) : 
+                    if ( ! empty($posts_array) ) :
                         $i  = 0;
                         foreach ( $posts_array as  $post ) :
                             setup_postdata( $post );
@@ -251,7 +251,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
             }
 
             $posts_array = query_posts( $args );
-            if ( !empty($posts_array) ) : 
+            if ( !empty($posts_array) ) :
                 $i  = j;
                 foreach ( $posts_array as  $post ) :
                     setup_postdata( $post );
