@@ -72,11 +72,12 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
     </div>
 </section>
 <section class="[ column-12_12 column sc_column_item ][ resource-centre-results__section ]">
+    <a name="search-anchor"></a>
     <p class="search-resources-title">Search by</p>
     <article class="[ article ][ resource-centre__search-wrapper ][ margin-bottom ]">
         <div class="[ search_wrap search_wrap search_style_regular search_opened ][ width-100 ]" title="Open/close search form">
             <div class="[ search_form_wrap ]">
-                <form role="search" id="resources-search" method="get" class="[ search_form ]" action="" value="$search">
+                <form role="search" id="resources-search" method="get" class="[ search_form ]" action="#search-anchor" value="$search">
                     <div class="search_field_container">
                         <input type="text" class="[ search_field ]" placeholder="i.e. Open data policies" value="" name="search-resources" title="">
                         <button type="submit" class="[ search_submit icon-search-1 ][ right-0 ]" title="Start search">Search</button>
