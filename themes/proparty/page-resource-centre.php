@@ -94,25 +94,25 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
     </article>
     <div class="datos-busquedas-centre [ margin-bottom ]">
         <?php if ($search != '') : ?>
-            <span>Search results for “<?php echo $search; ?>”<a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span>Search results for “<?php echo $search; ?>”<a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($user_profiles != '') : ?>
-            <span><?php echo $user_profiles; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $user_profiles; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($data_driven_classification != '') : ?>
-            <span><?php echo $data_driven_classification; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $data_driven_classification; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($themes_and_topics != '') : ?>
-            <span><?php echo $themes_and_topics; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $themes_and_topics; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($reference_type != '') : ?>
-            <span><?php echo $reference_type; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $reference_type; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($territories != '') : ?>
-            <span><?php echo $territories; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $territories; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($principle != '') : ?>
-            <span><?php echo $principle; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $principle; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
     </div>
     <div class="cont-filters">
@@ -290,7 +290,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
                         <article class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ]">
                     <?php endif; ?>
                 <?php endforeach; ?>
-                <p class="load-more"><a href="<?php echo site_url('/resource-centre-results/?resources_page=' . ++$resources_page); ?>">View More</a></p>
+                <p class="load-more"><a href="<?php echo site_url('/resource-centre/?resources_page=' . ++$resources_page); ?>">View More</a></p>
             <?php endif; ?>
         </article>
     </section>

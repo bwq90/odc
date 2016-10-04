@@ -109,7 +109,7 @@
 	            <?php endif; ?>
 	        </article>
 					<div style="text-align: center;">
-							<a class="btn btn-resource-centre" href="resource-centre-results/">RESOURCE CENTRE</a>
+							<a class="btn btn-resource-centre" href="resource-centre/">RESOURCE CENTRE</a>
 					</div>
 	    </section>
     </div>
