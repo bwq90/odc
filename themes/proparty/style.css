@@ -4753,6 +4753,14 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .p-adopted{display: block; width: 33.3%; color: #3598db; font-size: 18px; float: left; font-family: 'Montserrat';}
 .p-adopted span{color: #363842; font-size: 14px;}
 
+.slider_wrap a.slider-button        { display: none !important; }
+
+.content .search_wrap .search_form_wrap .search_field               { display: inline-block; width: calc(80% - 60px); position: relative; }
+.content .search_wrap .search_form_wrap .search_field_container     { width: 60%; margin: 0 auto; }
+.content .search_wrap .search_form_wrap .search_submit              { display: inline-block; width: 20%; height: 38px; padding: 0; background-color: #00b9f2; font-family: 'Montserrat'; font-size: 14px; color: #fff !important; position: relative; border-radius: 0 !important; top: -1px; left: -4px; }
+.content .search_wrap .search_form_wrap .search_submit:before,
+.content .search_wrap .search_form_wrap .search_submit:after        { display: none; }
+
 /*******************************
     Resource Centre Results
 *******************************/
