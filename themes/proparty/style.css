@@ -4753,6 +4753,8 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .p-adopted{display: block; width: 33.3%; color: #3598db; font-size: 18px; float: left; font-family: 'Montserrat';}
 .p-adopted span{color: #363842; font-size: 14px;}
 
+.slider_wrap a.slider-button        { display: none !important; }
+
 /*******************************
     Resource Centre Results
 *******************************/
