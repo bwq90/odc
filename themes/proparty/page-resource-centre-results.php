@@ -146,7 +146,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
         </ul>
     </div>
     <div class="cont-filters">
-        <p>Advanced Filter<img src="<?php echo THEMEPATH.'/images/ic-filters.png' ?>"></p>
+        <p id="filters-title">Advanced Filter<img src="<?php echo THEMEPATH.'/images/ic-filters.png' ?>"><span class="filters-tooltip">1. Refine your search to get better results<br />2. Select one or several options</span></p>
         <div class="select-filter">
             <p class="filter-label">User Profiles</p>
             <?php show_filters( 'user_profiles', $user_profiles ); ?>
@@ -167,6 +167,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
             <p class="filter-label">Territories</p>
             <?php show_filters( 'territories', $territories ); ?>
         </div>
+        <div class="clearfix"></div>
     </div>
     <div class="cont-order-centre">
         <p>Order</p>
