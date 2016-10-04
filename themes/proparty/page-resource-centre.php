@@ -178,7 +178,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
         <?php $group_active = isset($_POST['group']) ? $_POST['group'] : 'ninguno'; ?>
         <article class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ]">
             <?php $args = array(
-                'posts_per_page'   => $page_size * $resources_page,
+                'posts_per_page'   => ($page_size * $resources_page) + $page_size,
                 'category'         => '',
                 'category_name'    => '',
                 'orderby'          => $order,
@@ -256,6 +256,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
             if ( !empty($posts_array) ) :
                 $i  = j;
                 foreach ( $posts_array as  $post ) :
+                    if ($j >= ($page_size * $resources_page) ) { break;}
                     setup_postdata( $post );
                     $meta           = get_post_meta( $post->ID, '_open_contribution_meta', true );
                     $upcoming       = get_post_meta( $post->ID, 'meta-upcoming', true );
@@ -290,7 +291,9 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
                         <article class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ]">
                     <?php endif; ?>
                 <?php endforeach; ?>
-                <p class="load-more"><a href="<?php echo site_url('/resource-centre/?resources_page=' . ++$resources_page); ?>">View More</a></p>
+                <?php if (count($posts_array) > ($page_size * $resources_page)) : ?>
+                    <p class="load-more"><a href="<?php echo site_url('/resource-centre/?resources_page=' . ++$resources_page); ?>">View More</a></p>
+                <?php endif; ?>
             <?php endif; ?>
         </article>
     </section>
