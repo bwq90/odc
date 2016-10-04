@@ -77,8 +77,10 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
         <div class="[ search_wrap search_wrap search_style_regular search_opened ][ width-100 ]" title="Open/close search form">
             <div class="[ search_form_wrap ]">
                 <form role="search" id="resources-search" method="get" class="[ search_form ]" action="" value="$search">
-                    <button type="submit" class="[ search_submit icon-search-1 ][ right-0 ]" title="Start search"></button>
-                    <input type="text" class="[ search_field ][ width-100 ]" placeholder="i.e. Open data policies" value="" name="search-resources" title="">
+                    <div class="search_field_container">
+                        <input type="text" class="[ search_field ]" placeholder="i.e. Open data policies" value="" name="search-resources" title="">
+                        <button type="submit" class="[ search_submit icon-search-1 ][ right-0 ]" title="Start search">Search</button>
+                    </div>
                     <input type="hidden" name="search-order" value="<?php echo $order; ?>">
                     <input type="hidden" name="search-user_profiles" value="<?php echo $user_profiles; ?>">
                     <input type="hidden" name="search-data_driven_classification" value="<?php echo $data_driven_classification; ?>">
