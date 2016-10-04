@@ -4761,6 +4761,8 @@ div#booking_calendar_select_label + .booking_cleardiv {
 
 .slider_wrap a.slider-button        { display: none !important; }
 
+/*.wpb_wrapper .sc_section  {background-color: #f6f6f6 !important;}*/
+
 .content .search_wrap .search_form_wrap .search_field               { display: inline-block; width: calc(80% - 60px); position: relative; }
 .content .search_wrap .search_form_wrap .search_field_container     { width: 60%; margin: 0 auto; }
 .content .search_wrap .search_form_wrap .search_submit              { display: inline-block; width: 20%; height: 38px; padding: 0; background-color: #00b9f2; font-family: 'Montserrat'; font-size: 14px; color: #fff !important; position: relative; border-radius: 0 !important; top: -1px; left: -4px; }
@@ -4794,8 +4796,8 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .cont-order-centre span             { display: inline-block; width: auto; padding: 5px 0px 5px 0px; color: #333; margin-left: 5px; font-family: 'Montserrat'; font-size: 13px; }
 .datos-busquedas-centre span        { padding: 4px 10px 4px 10px; font-family: 'Raleway'; font-size: 12px; border-radius: 3px; }
 .resources-results-header h1                                        { color: #fff; margin-bottom: 0; font-family: 'Raleway'; font-size: 40px; }
-.sc_resources_home > .content_home h1 > span                        { font-family: 'Montserrat'; font-weight: bold; font-size: 16px; color: rgba(0,0,0,0.3); text-transform: uppercase; position: relative; left: -5px; top: -25px; }
-.resources-results-header h1 > span                                 { font-family: 'Montserrat'; font-weight: bold; font-size: 13px; color: rgba(0,0,0,0.3); text-transform: uppercase; position: relative; left: 5px; top: -20px; }
+.sc_resources_home > .content_home h1 > span                        { font-family: 'Montserrat'; font-weight: bold; font-size: 16px; color: rgba(0,0,0,0.3); text-transform: uppercase; position: relative; left: -15px; top: -25px; }
+.resources-results-header h1 > span                                 { font-family: 'Montserrat'; font-weight: bold; font-size: 13px; color: rgba(0,0,0,0.3); text-transform: uppercase; position: relative; left: 0px; top: -20px; }
 .resources-results-header .page_title                               { padding: 0; text-align: left; }
 .breadcrumbs.left-aligned                                           { float: none; padding-left: 0 !important; }
 .breadcrumbs.left-aligned > a:first-child                           { padding-left: 0; }
