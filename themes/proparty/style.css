@@ -4623,6 +4623,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
     color: #333;
     font-size: 14px;
     font-family: 'Montserrat';
+    padding-top: 3px;
 }
 
 .post__image{
@@ -4828,7 +4829,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 
 .resource-centre-results__section .resource-result > .inner > h4,
 .resource-centre-results__section .resource-result > .inner > .metadata                             { padding: 10px 20px; }
-.resource-centre-results__section .resource-result > .inner > h4                                    { padding: 0 20px; margin-bottom: 5px; line-height: 20px; }
+.resource-centre-results__section .resource-result > .inner > h4                                    { padding: 0 20px; margin-top: 5px; line-height: 20px; }
 .resource-centre-results__section .resource-result > .inner > h4 > a                                { font-family: "Montserrat"; font-size: 14px; color: #00b9f2; }
 .resource-centre-results__section .resource-result > .inner > .metadata                             { background-color: #f6f6f6; }
 .resource-centre-results__section .resource-result > .inner > .metadata .info                       { width: 100%; margin-bottom: 10px; }
