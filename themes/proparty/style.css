@@ -4801,7 +4801,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .resources-results-header .page_title                               { padding: 0; text-align: left; }
 .breadcrumbs.left-aligned                                           { float: none; padding-left: 0 !important; }
 .breadcrumbs.left-aligned > a:first-child                           { padding-left: 0; }
-.content .search_wrap .search_form_wrap .search_field               { font-family: 'Montserrat'; font-size: 18px; color: #c3c3c3; }
+.content .search_wrap .search_form_wrap .search_field               { font-family: 'Montserrat'; font-size: 18px; color: #c3c3c3; border-radius: 5px; }
 .resource-article .resource-sidebar                                 { background-color: #f6f6f6; }
 .resource-article .resource-sidebar > h5                            { margin-bottom: 0; font-size: 14px; font-family: 'Raleway'; line-height: 18px; font-weight: normal; color: #c3c3c3; }
 .resource-article .resource-sidebar > p                             { font-size: 14px; font-family: 'Raleway'; color: #333; }
