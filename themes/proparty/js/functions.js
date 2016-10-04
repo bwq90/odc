@@ -231,3 +231,8 @@ $( document ).on( 'change', '.resources-results-filter', function ( e ) {
     $( 'input[name="search-' + el.data( 'filter-group' ) + '"]', form ).val( el.val() );
     form.submit();
 });
+
+$( document ).on( 'hover', '#filters-title > img', function ( e ) {
+    e.preventDefault();
+    $( '#filters-title > .filters-tooltip' ).toggle();
+});

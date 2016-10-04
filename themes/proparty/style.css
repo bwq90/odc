@@ -4772,6 +4772,8 @@ div#booking_calendar_select_label + .booking_cleardiv {
 /*******************************
     Resource Centre Results
 *******************************/
+#filters-title                      { position: relative; overflow: visible; }
+#filters-title > .filters-tooltip   { display: none; width: 250px; padding: 5px; background-color: rgba(0,0,0,0.6); font-family: "Raleway"; font-size: 10px; line-height: 16px; font-weight: 300; color: #fff; position: absolute; top: 50%; left: 170px; transform: translateY(-50%); text-transform: none; border-radius: 5px; }
 .btn-resource-centre                { display: block; width: 200px; margin: 40px auto 0; padding: 10px 25px; background-color: #00b9f2; font-family: 'Montserrat'; font-size: 14px; text-align: center; color: #fff; text-transform: uppercase; border-radius: 5px; }
 .sc_resources_home                  { margin-top: 30px; }
 #featured-resources                 { width: 5000px; margin-top: -60px; margin-bottom: 30px; padding-top: 30px; padding-bottom: 50px; background-color: #f6f6f6; position: relative; left: 50%; transform: translateX(-50%); }
@@ -4783,7 +4785,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .resources-results-header h4        { font-family: "Raleway"; font-size: 18px; margin: 0; padding: 0 10%; text-align: center; color: #fff; line-height: 40px; }
 .search-resources-title             { margin-bottom: 10px; text-transform: uppercase; font-family: 'Montserrat'; font-size: 14px; color: #333; }
 .cont-order-centre                  { text-align: left; }
-.cont-filters                       { overflow: hidden; }
+.cont-filters                       { overflow: visible; }
 .cont-filters > .principle-filters  { list-style: none; overflow: hidden; }
 .cont-filters .principle-filter     { display: block; width: calc(16.6667% - 10px); padding: 0 5px; float: left; text-align: center; cursor: pointer; color: #00b9f2; font-family: 'Montserrat'; font-size: 14px; }
 .cont-filters .principle-filter img { max-width: 40%; margin-bottom: 15px; }
@@ -4813,7 +4815,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .resource-article .post_content > p                                 { font-family: 'Raleway'; font-size: 14px; }
 .resource-article .doc-link                                         { display: inline-block; margin-top: 20px; margin-bottom: 20px; padding: 5px 25px; background-color: #00b9f2; font-family: 'Montserrat'; font-size: 18px; color: #fff; text-transform: uppercase; border-radius: 5px; }
 .resource-article .resources-widget-title                           { margin-top: 20px; margin-bottom: 20px; font-size: 16px; font-family: 'Raleway'; line-height: 24px; color: #00b9f2; }
-.cont-filters > .select-filter:last-child                           { margin-right: 0; }
+.cont-filters > .select-filter:nth-child(6)                         { margin-right: 0; }
 .cont-filters > .select-filter > .filter-label                      { margin-bottom: 5px; font-size: 12px; font-family: 'Raleway'; color: #333; }
 .resource-centre-results__section .resources-results-filter         { height: 35px; line-height: 35px; padding: 0 10px; font-size: 13px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
 .resource-centre-results__section .search_form_wrap                 { width: 100%; margin-top: 12px; }
