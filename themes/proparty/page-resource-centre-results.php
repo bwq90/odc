@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php 
+<?php
 $page_size = 9;
 $resources_page = ( isset( $_GET['resources_page'] ) ) ? ( int ) $_GET['resources_page'] : 1;
 $search = isset($_GET['search-resources']) ? $_GET['search-resources'] : '';
@@ -13,7 +13,6 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
 ?>
 <section id="featured-resources">
     <div class="inner">
-        <h1 class="page-title-big">Resource Center</h1>
         <section class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ][ resource-centre-results ]">
             <section class="[ column-12_12 column sc_column_item ][ resource-centre-results__section ]">
                 <h3>Featured resources</h3>
@@ -31,7 +30,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
                         'suppress_filters' => true
                     );
                     $posts_array = get_posts( $args );
-                    if ( ! empty($posts_array) ) : 
+                    if ( ! empty($posts_array) ) :
                         $i  = 0;
                         foreach ( $posts_array as  $post ) :
                             setup_postdata( $post );
@@ -47,7 +46,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
                                     <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( 'medium', array( 'class' => '[ wp-post-image ]' ) ); ?></a>
                                     <h4 class="[ post__title ]">
                                         <a href="<?php echo the_permalink(); ?>"><?php echo get_the_title(); ?></a>
-                                        <span class="resource-date"><?php echo get_the_date(); ?></span>
+                                        <span class="resource-date"><?php echo get_the_date('n/j/y'); ?></span>
                                     </h4>
                                     <p class="resource-author">by <?php echo get_post_meta( get_the_ID(), 'meta-author', true ); ?></p>
                                     <div class="metadata">
@@ -57,6 +56,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
                                             <p class="info-link"><a href="<?php echo the_permalink(); ?>">Read more</a></p>
                                         </div>
                                     </div>
+                                    <span class="contribution-tag">Open<br />for<br />comments</span>
                                 </div>
                             </div>
                             <?php if ( ++$i % 3 == 0 ) : ?>
@@ -72,11 +72,12 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
     </div>
 </section>
 <section class="[ column-12_12 column sc_column_item ][ resource-centre-results__section ]">
+    <a name="search-anchor"></a>
     <p class="search-resources-title">Search by</p>
     <article class="[ article ][ resource-centre__search-wrapper ][ margin-bottom ]">
         <div class="[ search_wrap search_wrap search_style_regular search_opened ][ width-100 ]" title="Open/close search form">
             <div class="[ search_form_wrap ]">
-                <form role="search" id="resources-search" method="get" class="[ search_form ]" action="" value="$search">
+                <form role="search" id="resources-search" method="get" class="[ search_form ]" action="#search-anchor" value="$search">
                     <div class="search_field_container">
                         <input type="text" class="[ search_field ]" placeholder="i.e. Open data policies" value="" name="search-resources" title="">
                         <button type="submit" class="[ search_submit icon-search-1 ][ right-0 ]" title="Start search">Search</button>
@@ -94,25 +95,25 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
     </article>
     <div class="datos-busquedas-centre [ margin-bottom ]">
         <?php if ($search != '') : ?>
-            <span>Search results for “<?php echo $search; ?>”<a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span>Search results for “<?php echo $search; ?>”<a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($user_profiles != '') : ?>
-            <span><?php echo $user_profiles; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $user_profiles; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($data_driven_classification != '') : ?>
-            <span><?php echo $data_driven_classification; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $data_driven_classification; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($themes_and_topics != '') : ?>
-            <span><?php echo $themes_and_topics; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $themes_and_topics; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($reference_type != '') : ?>
-            <span><?php echo $reference_type; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $reference_type; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($territories != '') : ?>
-            <span><?php echo $territories; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $territories; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
         <?php if ($principle != '') : ?>
-            <span><?php echo $principle; ?><a href="<?php echo site_url('/resource-centre-results/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
+            <span><?php echo $principle; ?><a href="<?php echo site_url('/resource-centre/'); ?>"><img src="<?php echo THEMEPATH.'/images/cruz-azul-marca.png' ?>"></a></span>
         <?php endif; ?>
     </div>
     <div class="cont-filters">
@@ -178,7 +179,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
         <?php $group_active = isset($_POST['group']) ? $_POST['group'] : 'ninguno'; ?>
         <article class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ]">
             <?php $args = array(
-                'posts_per_page'   => $page_size * $resources_page,
+                'posts_per_page'   => ($page_size * $resources_page) + $page_size,
                 'category'         => '',
                 'category_name'    => '',
                 'orderby'          => $order,
@@ -253,9 +254,10 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
             }
 
             $posts_array = query_posts( $args );
-            if ( !empty($posts_array) ) : 
+            if ( !empty($posts_array) ) :
                 $i  = j;
                 foreach ( $posts_array as  $post ) :
+                    if ($j >= ($page_size * $resources_page) ) { break;}
                     setup_postdata( $post );
                     $meta           = get_post_meta( $post->ID, '_open_contribution_meta', true );
                     $upcoming       = get_post_meta( $post->ID, 'meta-upcoming', true );
@@ -267,11 +269,11 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
                         $resource_filter_classes .= $value . ' ';
                     endforeach;?>
                     <div class="[ column-4_12 sc_column_item ][ resource-result ][ <?php echo $resource_filter_classes; ?>]">
-                        <div class="inner">
+                        <div class="inner <?php echo ($upcoming == 'yes' ? 'upcoming-bg' : ''); ?>">
                             <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( 'medium', array( 'class' => '[ wp-post-image ]' ) ); ?></a>
                             <h4 class="[ post__title ]">
                                 <a href="<?php echo the_permalink(); ?>"><?php echo get_the_title(); ?></a>
-                                <span class="resource-date"><?php echo get_the_date(); ?></span>
+                                <div class="resource-date"><?php echo get_the_date('n/j/y'); ?></div>
                             </h4>
                             <p class="resource-author">by <?php echo get_post_meta( get_the_ID(), 'meta-author', true ); ?></p>
                             <div class="metadata">
@@ -290,7 +292,9 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
                         <article class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ]">
                     <?php endif; ?>
                 <?php endforeach; ?>
-                <p class="load-more"><a href="<?php echo site_url('/resource-centre-results/?resources_page=' . ++$resources_page); ?>">View More</a></p>
+                <?php if (count($posts_array) > ($page_size * $resources_page)) : ?>
+                    <p class="load-more"><a href="<?php echo site_url('/resource-centre/?resources_page=' . ++$resources_page); ?>">View More</a></p>
+                <?php endif; ?>
             <?php endif; ?>
         </article>
     </section>
