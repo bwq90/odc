@@ -4765,7 +4765,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 
 .content .search_wrap .search_form_wrap .search_field               { display: inline-block; width: calc(80% - 60px); position: relative; }
 .content .search_wrap .search_form_wrap .search_field_container     { width: 60%; margin: 0 auto; }
-.content .search_wrap .search_form_wrap .search_submit              { display: inline-block; width: 20%; height: 38px; padding: 0; background-color: #00b9f2; font-family: 'Montserrat'; font-size: 14px; color: #fff !important; position: relative; border-radius: 0 !important; top: -1px; left: -4px; }
+.content .search_wrap .search_form_wrap .search_submit              { display: inline-block; width: 20%; height: 38px; padding: 0; background-color: #00b9f2; font-family: 'Montserrat'; font-size: 14px; color: #fff !important; position: relative; border-radius: 5px !important; top: -1px; left: -4px; }
 .content .search_wrap .search_form_wrap .search_submit:before,
 .content .search_wrap .search_form_wrap .search_submit:after        { display: none; }
 
