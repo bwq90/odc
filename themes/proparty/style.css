@@ -4812,7 +4812,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .resource-centre-results__section .search_form_wrap                 { width: 100%; margin-top: 12px; }
 .resource-centre-results__section .search_form_wrap form            { height: 38px; }
 .resource-centre-results__section .search_form_wrap input[type="text"],
-.resource-centre-results__section .search_form_wrap button          { top: 0; }
+.resource-centre-results__section .search_form_wrap button          { top: 0.5px; }
 .resource-centre-results__section .resource-result                  { margin-bottom: 40px; }
 .resource-centre-results__section .resource-result > .inner         { background-color: #fff; box-shadow: 0px 3px 5px rgba(136, 136, 136, 0.6); position: relative; }
 .resource-centre-results__section .resource-result > .inner img     { width: 100%; }
