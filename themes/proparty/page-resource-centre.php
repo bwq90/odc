@@ -294,7 +294,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
                     <?php endif; ?>
                 <?php endforeach; ?>
                 <?php if (count($posts_array) > ($page_size * $resources_page)) : ?>
-                    <p class="load-more"><a href="<?php echo site_url('/resource-centre/?resources_page=' . ++$resources_page); ?>">View More</a></p>
+                    <p class="load-more"><a href="<?php echo site_url('/resource-centre/?resources_page=' . ++$resources_page . '#search-anchor'); ?>">View More</a></p>
                 <?php endif; ?>
             <?php endif; ?>
         </article>
