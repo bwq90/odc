@@ -4690,7 +4690,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
  */
 .content_home{margin-bottom: 60px;}
 .sc_gap_home{background-color: rgb(240, 240, 240); margin: 0;padding: 1em 1.5em 3em 1em;}
-.caja-principal{position: relative; overflow: hidden; width: 25%; height: 154px; margin-right: 1.2%; margin-top: 15px; padding: 0 3.7%; float: left; background: #fff;line-height: 162px;}
+.caja-principal{position: relative; overflow: hidden; width: 25%; height: 154px; margin-right: 1.2%; margin-top: 15px; padding: 0 3.7%; float: left; background: #fff;line-height: 162px; box-shadow: 0px 3px 5px rgba(136, 136, 136, 0.6);}
 .caja-principal a{display: inline-block;vertical-align: middle;width: 100%;font-size: 18px;line-height: 16px;}
 .caja-principal.ultimo{margin-right: 0;}
 .caja-principal img{width: 23%; float: left; margin-right: 10%;}
