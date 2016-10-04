@@ -46,14 +46,16 @@
                         <?php foreach ( $query_resources as  $post ) :
                             setup_postdata( $post );
                             $meta = get_post_meta( $post->ID, '_open_contribution_meta', true );
+                            $upcoming       = get_post_meta( $post->ID, 'meta-upcoming', true );
                             $class_contri = $meta == 'yes' ?  $meta.'-contribution ' : 'no-contribution ';
+                            $class_contri   .= $upcoming == 'yes' ? 'upcoming-resource ' : '';
                             $resource_info = get_resource_info( $post->ID );
                             $resource_filter_classes = $class_contri;
                             foreach ( $resource_info as $key => $value ) :
                                 $resource_filter_classes .= $value . ' ';
                             endforeach;?>
                             <div class="[ column-4_12 sc_column_item ][ resource-result ][ <?php echo $resource_filter_classes; ?>]">
-                                <div class="inner">
+                                <div class="inner <?php echo ($upcoming == 'yes' ? 'upcoming-bg' : ''); ?>">
                                     <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( 'medium', array( 'class' => '[ wp-post-image ]' ) ); ?></a>
                                     <h4 class="[ post__title ]">
                                         <a href="<?php echo the_permalink(); ?>"><?php echo get_the_title(); ?></a>
@@ -67,6 +69,8 @@
                                             <p class="info-link"><a href="<?php echo the_permalink(); ?>">Read more</a></p>
                                         </div>
                                     </div>
+                                    <span class="contribution-tag">Open<br />for<br />comments</span>
+                                    <span class="upcoming-tag">Coming<br />soon</span>
                                 </div>
                             </div>
                             <?php if ( ++$i % 3 == 0 ) : ?>
