@@ -900,7 +900,12 @@ input:focus:-ms-input-placeholder { color:transparent; }
 
 /* Content and Sidebar */
 .sidebar_show .content { width: 750px; }
-.sidebar {               width: 350px; }
+
+@media (max-width: 1134px) {                          .sidebar {  width: 350px; height: 330px; } }
+@media (min-width: 1135px) and (max-width: 1284px) {  .sidebar {  width: 350px; height: 382px; } }
+@media (min-width: 1285px) {                          .sidebar {  width: 350px; height: 408px; } }
+
+
 .sidebar_right .content { float: left; }
 .sidebar_right .sidebar {
     float: right;
@@ -4804,7 +4809,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .resource-article .post_content > h3                                { margin-bottom: 20px; font-family: 'Montserrat'; font-size: 14px; color: #00b9f2; }
 .resource-article .post_content > .resource-post-author             { font-size: 14px; font-family: 'Montserrat'; color: #c3c3c3; }
 .resource-article .post_content > p                                 { font-family: 'Raleway'; font-size: 14px; }
-.resource-article .doc-link                                         { display: inline-block; margin-top: 20px; margin-bottom: 20px; padding: 10px 25px; background-color: #00b9f2; font-family: 'Montserrat'; font-size: 18px; color: #fff; text-transform: uppercase; border-radius: 5px; }
+.resource-article .doc-link                                         { display: inline-block; margin-top: 20px; margin-bottom: 20px; padding: 5px 25px; background-color: #00b9f2; font-family: 'Montserrat'; font-size: 18px; color: #fff; text-transform: uppercase; border-radius: 5px; }
 .resource-article .resources-widget-title                           { margin-top: 20px; margin-bottom: 20px; font-size: 16px; font-family: 'Raleway'; line-height: 24px; color: #00b9f2; }
 .cont-filters > .select-filter:last-child                           { margin-right: 0; }
 .cont-filters > .select-filter > .filter-label                      { margin-bottom: 5px; font-size: 12px; font-family: 'Raleway'; color: #333; }
