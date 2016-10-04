@@ -4788,7 +4788,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .cont-order-centre span             { display: inline-block; width: auto; padding: 5px 0px 5px 0px; color: #333; margin-left: 5px; font-family: 'Montserrat'; font-size: 13px; }
 .datos-busquedas-centre span        { padding: 4px 10px 4px 10px; font-family: 'Raleway'; font-size: 12px; border-radius: 3px; }
 .resources-results-header h1                                        { color: #fff; margin-bottom: 0; font-family: 'Raleway'; font-size: 40px; }
-.sc_resources_home > .content_home h1 > span,
+.sc_resources_home > .content_home h1 > span                        { font-family: 'Montserrat'; font-weight: bold; font-size: 16px; color: rgba(0,0,0,0.3); text-transform: uppercase; position: relative; left: -5px; top: -25px; }
 .resources-results-header h1 > span                                 { font-family: 'Montserrat'; font-weight: bold; font-size: 13px; color: rgba(0,0,0,0.3); text-transform: uppercase; position: relative; left: 5px; top: -20px; }
 .resources-results-header .page_title                               { padding: 0; text-align: left; }
 .breadcrumbs.left-aligned                                           { float: none; padding-left: 0 !important; }
