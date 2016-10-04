@@ -160,7 +160,7 @@
 		.'[/trx_content][/trx_section]'
 		.'[/trx_gap]'
 		.'[/vc_column]'
-		.'[vc_row][vc_column][trx_gap][trx_block bg_tint="dark" bg_color="#33ccff" bg_overlay="0.75" top="0" bottom="36"][trx_content top="3em" bottom="3em"][trx_section dedicated="no" align="center" pan="no" scroll="no" color="#ffffff" bg_overlay="0" bg_texture="0" font_size="18" font_weight="400" bottom="40" css="font-family: Montserrat;"][trx_image url="http://odcharter.staging.wpengine.com/wp-content/uploads/2015/01/testimonials_header.png" top="0"][/trx_section][trx_testimonials align="center" autoheight="yes" custom="no" width="70%"][vc_column_text]'
+		.'[vc_row][vc_column][trx_gap][trx_block bg_tint="dark" bg_color="#33ccff" bg_overlay="0.75" top="0" bottom="0"][trx_content top="3em" bottom="3em"][trx_section dedicated="no" align="center" pan="no" scroll="no" color="#ffffff" bg_overlay="0" bg_texture="0" font_size="18" font_weight="400" bottom="40" css="font-family: Montserrat;"][trx_image url="http://odcharter.staging.wpengine.com/wp-content/uploads/2015/01/testimonials_header.png" top="0"][/trx_section][trx_testimonials align="center" autoheight="yes" custom="no" width="70%"][vc_column_text]'
 		.'[/vc_column_text][/trx_testimonials][/trx_content][/trx_block][/trx_gap][/vc_column][/vc_row]'
 	);
 
