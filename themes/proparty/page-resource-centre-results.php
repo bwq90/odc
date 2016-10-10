@@ -12,64 +12,62 @@ $territories = isset($_GET['search-territories']) ? $_GET['search-territories'] 
 $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-filter'] : '';
 ?>
 <section id="featured-resources">
-    <div class="inner">
-        <section class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ][ resource-centre-results ]">
-            <section class="[ column-12_12 column sc_column_item ][ resource-centre-results__section ]">
-                <h3>Featured resources</h3>
-                <article class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ]">
-                    <?php $args = array(
-                        'posts_per_page'   => 3,
-                        'category'         => '',
-                        'category_name'    => '',
-                        'orderby'          => 'date',
-                        'order'            => 'DESC',
-                        'meta_key'         => 'meta-featured',
-                        'meta_value'       => 'yes',
-                        'post_type'        => 'resource',
-                        'post_status'      => 'publish',
-                        'suppress_filters' => true
-                    );
-                    $posts_array = get_posts( $args );
-                    if ( ! empty($posts_array) ) :
-                        $i  = 0;
-                        foreach ( $posts_array as  $post ) :
-                            setup_postdata( $post );
-                            $meta = get_post_meta( $post->ID, '_open_contribution_meta', true );
-                            $class_contri = $meta == 'yes' ?  $meta.'-contribution ' : 'no-contribution ';
-                            $resource_info = get_resource_info( $post->ID );
-                            $resource_filter_classes = $class_contri;
-                            foreach ( $resource_info as $key => $value ) :
-                                $resource_filter_classes .= $value . ' ';
-                            endforeach;?>
-                            <div class="[ column-4_12 sc_column_item ][ resource-result ][ <?php echo $resource_filter_classes; ?>]">
-                                <div class="inner">
-                                    <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( 'medium', array( 'class' => '[ wp-post-image ]' ) ); ?></a>
-                                    <h4 class="[ post__title ]">
-                                        <a href="<?php echo the_permalink(); ?>"><?php echo get_the_title(); ?></a>
-                                        <span class="resource-date"><?php echo get_the_date('n/j/y'); ?></span>
-                                    </h4>
-                                    <p class="resource-author">by <?php echo get_post_meta( get_the_ID(), 'meta-author', true ); ?></p>
-                                    <div class="metadata">
-                                        <div class="info">
-                                            <p class="info-title">Description</p>
-                                            <p class="info-data"><?php echo wp_trim_words( get_the_excerpt(), 15, '...' ) ?></p>
-                                            <p class="info-link"><a href="<?php echo the_permalink(); ?>">Read more</a></p>
-                                        </div>
+    <section class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ][ resource-centre-results ]">
+        <section class="[ column-12_12 column sc_column_item ][ resource-centre-results__section ]">
+            <h3>Featured resources</h3>
+            <article class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ]">
+                <?php $args = array(
+                    'posts_per_page'   => 3,
+                    'category'         => '',
+                    'category_name'    => '',
+                    'orderby'          => 'date',
+                    'order'            => 'DESC',
+                    'meta_key'         => 'meta-featured',
+                    'meta_value'       => 'yes',
+                    'post_type'        => 'resource',
+                    'post_status'      => 'publish',
+                    'suppress_filters' => true
+                );
+                $posts_array = get_posts( $args );
+                if ( ! empty($posts_array) ) :
+                    $i  = 0;
+                    foreach ( $posts_array as  $post ) :
+                        setup_postdata( $post );
+                        $meta = get_post_meta( $post->ID, '_open_contribution_meta', true );
+                        $class_contri = $meta == 'yes' ?  $meta.'-contribution ' : 'no-contribution ';
+                        $resource_info = get_resource_info( $post->ID );
+                        $resource_filter_classes = $class_contri;
+                        foreach ( $resource_info as $key => $value ) :
+                            $resource_filter_classes .= $value . ' ';
+                        endforeach;?>
+                        <div class="[ column-4_12 sc_column_item ][ resource-result ][ <?php echo $resource_filter_classes; ?>]">
+                            <div class="inner">
+                                <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( 'medium', array( 'class' => '[ wp-post-image ]' ) ); ?></a>
+                                <h4 class="[ post__title ]">
+                                    <a href="<?php echo the_permalink(); ?>"><?php echo get_the_title(); ?></a>
+                                    <span class="resource-date"><?php echo get_the_date('n/j/y'); ?></span>
+                                </h4>
+                                <p class="resource-author">by <?php echo get_post_meta( get_the_ID(), 'meta-author', true ); ?></p>
+                                <div class="metadata">
+                                    <div class="info">
+                                        <p class="info-title">Description</p>
+                                        <p class="info-data"><?php echo wp_trim_words( get_the_excerpt(), 15, '...' ) ?></p>
+                                        <p class="info-link"><a href="<?php echo the_permalink(); ?>">Read more</a></p>
                                     </div>
-                                    <span class="contribution-tag">Open<br />for<br />comments</span>
                                 </div>
+                                <span class="contribution-tag">Open<br />for<br />comments</span>
                             </div>
-                            <?php if ( ++$i % 3 == 0 ) : ?>
-                                </article>
-                                <article class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ][ posts-container ]">
-                            <?php endif;
-                        endforeach;
-                    endif; ?>
-                </article>
-            </section>
+                        </div>
+                        <?php if ( ++$i % 3 == 0 ) : ?>
+                            </article>
+                            <article class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ][ posts-container ]">
+                        <?php endif;
+                    endforeach;
+                endif; ?>
+            </article>
         </section>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf09JJtQkohtHOqaxKxeLyXSUiPDaihkWfN0Q6ZFeuQ5BH97g/viewform" class="btn btn-contribute" target="_blank">Contribute</a>
-    </div>
+    </section>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf09JJtQkohtHOqaxKxeLyXSUiPDaihkWfN0Q6ZFeuQ5BH97g/viewform" class="btn btn-contribute" target="_blank">Contribute</a>
 </section>
 <section class="[ column-12_12 column sc_column_item ][ resource-centre-results__section ]">
     <a name="search-anchor"></a>
@@ -145,7 +143,7 @@ $principle = isset($_GET['search-principle-filter']) ? $_GET['search-principle-f
             </li>
         </ul>
     </div>
-    <div class="cont-filters">
+    <div class="cont-filters hidden-xs">
         <p id="filters-title">Advanced Filter<img src="<?php echo THEMEPATH.'/images/ic-filters.png' ?>"><span class="filters-tooltip">1. Refine your search to get better results<br />2. Select one or several options</span></p>
         <div class="select-filter">
             <p class="filter-label">User Profiles</p>
