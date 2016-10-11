@@ -223,7 +223,11 @@ if (!function_exists('axiom_show_breadcrumbs')) {
 				$all_title = trim($all_parts[1]);
 			if ( $all_title && axiom_strtolower($title) != axiom_strtolower($all_title)) {
 				$all_link = axiom_get_stream_page_link($type);
-				$rez_all = '<a class="breadcrumbs_item all" href="' . esc_url($all_link) . '">' . ($all_title) . '</a>' . (!empty($rez_all) ? $args['delimiter'] : '') . ($rez_all);
+				if ( is_singular( array('resource') ) ) {
+					$rez_all = '<a class="breadcrumbs_item all" href="' . get_permalink( get_page_by_path('resource-centre') ) . '">Resource Centre</a>' . (!empty($rez_all) ? $args['delimiter'] : '') . ($rez_all);
+				} else {
+					$rez_all = '<a class="breadcrumbs_item all" href="' . esc_url($all_link) . '">' . ($all_title) . '</a>' . (!empty($rez_all) ? $args['delimiter'] : '') . ($rez_all);
+				}
 			}
 		}
 
