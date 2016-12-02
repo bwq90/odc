@@ -198,7 +198,7 @@ $video_bg_show  = axiom_get_custom_option('show_video_bg')=='yes' && (axiom_get_
 			if ( is_page('resource-centre-results') || is_page('resource-centre') || is_singular( array( 'resource' ) ) ) {
 				require_once( axiom_get_file_dir('templates/parts/resource-centre-results-top.php') );
 			}
-			if ( is_page( 'anticorruption' ) || is_page( 'analytical-framework' ) ) {
+			if ( is_page( 'anticorruption' ) || is_page( 'analytical-framework' ) || is_page( 'challenge-corruption' ) ) {
 				require_once( axiom_get_file_dir('templates/parts/anticorruption-top.php') );
 			}
 			?>
