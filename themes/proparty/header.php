@@ -180,7 +180,7 @@ $video_bg_show  = axiom_get_custom_option('show_video_bg')=='yes' && (axiom_get_
 							</div>
 						<?php } ?>
 						<?php if ($show_title) { ?>
-							<h1 class="page_title <?php if ( is_page( 'resource-centre-results' ) ) echo "hidden" ?>">
+							<h1 class="page_title <?php if ( is_page( 'resource-centre-results' ) || is_page( 'anticorruption' ) || is_page( 'analytical-framework' ) || is_page( 'challenge-corruption' ) ) echo "hidden" ?>">
 								<?php if ( is_singular( array( 'resource' ) ) ) : ?>
 									Resource Centre
 								<?php else : ?>
@@ -198,9 +198,12 @@ $video_bg_show  = axiom_get_custom_option('show_video_bg')=='yes' && (axiom_get_
 			if ( is_page('resource-centre-results') || is_page('resource-centre') || is_singular( array( 'resource' ) ) ) {
 				require_once( axiom_get_file_dir('templates/parts/resource-centre-results-top.php') );
 			}
+			if ( is_page( 'anticorruption' ) || is_page( 'analytical-framework' ) ) {
+				require_once( axiom_get_file_dir('templates/parts/anticorruption-top.php') );
+			}
 			?>
 
-			<div class="page_content_wrap<?php echo (axiom_get_custom_option('custom_page_paddings') == 'no' ? '' : ' wrap_custom'); ?>"<?php echo (axiom_get_custom_option('show_page_top') == 'no' ? ' ' . trim($header_style) : ''); ?>>
+			<div class="page_content_wrap<?php echo (axiom_get_custom_option('custom_page_paddings') == 'no' ? '' : ' wrap_custom'); ?> <?php if ( is_page( 'anticorruption' ) || is_page( 'analytical-framework' ) || is_page( 'challenge-corruption' ) ) : ?>page-anticorruption<?php endif; ?>"<?php echo (axiom_get_custom_option('show_page_top') == 'no' ? ' ' . trim($header_style) : ''); ?>>
 
 				<?php
 				// Content and sidebar wrapper

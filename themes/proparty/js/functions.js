@@ -236,3 +236,9 @@ $( document ).on( 'hover', '#filters-title > img', function ( e ) {
     e.preventDefault();
     $( '#filters-title > .filters-tooltip' ).toggle();
 });
+
+$( document ).ready( function () {
+    if ( $( '.page-anticorruption' ).length > 0 ) {
+        $( '.anticorruption-sidebar' ).height( $( '.anticorruption-content' ).height() + 30 );
+    }
+});
