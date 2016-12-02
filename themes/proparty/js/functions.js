@@ -239,11 +239,13 @@ $( document ).on( 'hover', '#filters-title > img', function ( e ) {
 
 $( document ).ready( function () {
     if ( $( '.page-anticorruption' ).length > 0 ) {
-        var sidebar         = $( '.anticorruption-sidebar' ),
-            contentHeight   = $( '.anticorruption-content' ).height() + 30;
+        $( '.anticorruption-sidebar img' ).load( function () {
+            var sidebar         = $( '.anticorruption-sidebar' ),
+                contentHeight   = $( '.anticorruption-content' ).height() + 30;
 
-        if ( sidebar.height() < contentHeight ) {
-            sidebar.height( contentHeight );
-        }
+            if ( sidebar.height() < contentHeight ) {
+                sidebar.height( contentHeight );
+            }
+        });
     }
 });
