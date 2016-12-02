@@ -4874,6 +4874,9 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .anticorruption-sidebar > ul > li > ul > li > a                     { display: block; font-family: "Open Sans"; font-size: 13px; color: #545454; }
 .anticorruption-sidebar > ul > li > ul > li.active > a,
 .anticorruption-sidebar > ul > li > ul > li:hover > a               { color: #545454; font-weight: bold; }
+.anticorruption-sidebar .anticorruption-sponsors                    { text-align: center; }
+.anticorruption-sidebar .sponsor-label                              { margin-left: 20px; font-family: "Raleway"; font-size: 8px; color: #696A71; text-align: left; }
+.anticorruption-sidebar .anticorruption-sponsors > img              { display: block; width: 120px; margin: 0 auto 20px; }
 .anticorruption-content                                             { margin-bottom: 30px; }
 .anticorruption-content > .inner                                    { padding: 20px 40px; }
 .anticorruption-content h1                                          { margin-bottom: 20px; font-family: "Open Sans"; font-size: 34px; color: #00B9F1; }

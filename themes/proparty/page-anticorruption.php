@@ -9,6 +9,13 @@
             <li><a href="#">Section 3: Anti-Corruption Open Data Cases</a></li>
             <li><a href="#">Anex 1: Anti-Corruption Datasets in Detail</a></li>
         </ul>
+        <div class="anticorruption-sponsors">
+            <p class="sponsor-label">Sponsored By</p>
+            <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_ocp.png" alt="" />
+            <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_transparencia.png" alt="" />
+            <p class="sponsor-label">Collaborative product of:</p>
+            <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_open_data.png" alt="" />
+        </div>
     </div>
     <div class="[ column-9_12 sc_column_item ][ anticorruption-content ]">
         <div class="inner">

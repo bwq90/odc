@@ -239,6 +239,11 @@ $( document ).on( 'hover', '#filters-title > img', function ( e ) {
 
 $( document ).ready( function () {
     if ( $( '.page-anticorruption' ).length > 0 ) {
-        $( '.anticorruption-sidebar' ).height( $( '.anticorruption-content' ).height() + 30 );
+        var sidebar         = $( '.anticorruption-sidebar' ),
+            contentHeight   = $( '.anticorruption-content' ).height() + 30;
+
+        if ( sidebar.height() < contentHeight ) {
+            sidebar.height( contentHeight );
+        }
     }
 });
