@@ -249,3 +249,14 @@ $( document ).ready( function () {
         });
     }
 });
+
+$( document ).ready( function () {
+    $( '.collapsible-box .box-title' ).click( function ( e ) {
+        e.preventDefault();
+        var el  = $( e.currentTarget );
+
+        el.parent().find( '.box-content' ).slideToggle();
+
+        return false;
+    });
+});
