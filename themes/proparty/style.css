@@ -4856,6 +4856,8 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .resource-centre-results__section .resource-result > .upcoming-bg > .metadata .info .info-link > a,
 .resource-centre-results__section .resource-result > .upcoming-bg > .metadata .info .info-data            { color: #C2C3C6;}
 
+.odp-header                                                         { margin-top: -60px; }
+
 .page-anticorruption                                                { padding-top: 0; padding-bottom: 0; position: relative; }
 .text-left                                                          { text-align: left; float: left; }
 .text-right                                                         { text-align: right; float: right; }
@@ -4877,7 +4879,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .anticorruption-sidebar .sidebar-container > ul > li > ul > li:hover > a    { color: #545454; font-weight: bold; }
 .anticorruption-sidebar .anticorruption-sponsors                    { text-align: center; }
 .anticorruption-sidebar .sponsor-label                              { margin-left: 20px; font-family: "Raleway"; font-size: 8px; color: #696A71; text-align: left; }
-.anticorruption-sidebar .anticorruption-sponsors > img              { display: block; width: 120px; margin: 0 auto 20px; }
+.anticorruption-sidebar .anticorruption-sponsors > img              { display: block; width: 130px; margin: 0 auto 20px; }
 .anticorruption-content                                             { margin-bottom: 30px; }
 .anticorruption-content > .inner                                    { padding: 20px 40px; }
 .anticorruption-content h1                                          { margin-bottom: 20px; font-family: "Raleway"; font-weight: 500; font-size: 34px; color: #00B9F1; }
