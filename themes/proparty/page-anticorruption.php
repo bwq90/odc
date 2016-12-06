@@ -1,14 +1,48 @@
+<?php
+
+/*
+Template Name: Anticorruption
+*/
+
+?>
+
+<?php
+
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+    if( in_array('current_page_item', $classes) ){
+        $classes[] = 'active ';
+    }
+return $classes;
+}
+
+?>
+
 <?php get_header(); ?>
+<?php get_template_part( 'templates/parts/anticorruption', 'top' ); ?>
 <section id="anticorruption">
 <section class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ][ anticorruption ]">
     <div class="[ column-3_12 sc_column_item ][ anticorruption-sidebar ]">
-        <ul>
-            <li class="active"><a href="<?php echo get_bloginfo( 'url' ); ?>/anticorruption">Home</a></li>
-            <li><a href="<?php echo get_bloginfo( 'url' ); ?>/analytical-framework">Section 2: Analytical Framework</a></li>
-            <li><a href="#">Section 2: Anti-Corruption Open Data</a></li>
-            <li><a href="#">Section 3: Anti-Corruption Open Data Cases</a></li>
-            <li><a href="#">Anex 1: Anti-Corruption Datasets in Detail</a></li>
-        </ul>
+
+<?php
+
+        if ( has_children() OR $post->
+post_parent > 0 ) { ?>
+    <ul>
+    <li <?php if(is_page($post->post_parent )) {?> class="active" <?php }?>><a href="<?php echo get_the_permalink(get_top_ancestor_id()); ?>">Home</a></li>
+
+        <?php
+
+                    $args = array(
+                        'child_of' =>
+        get_top_ancestor_id(),
+                        'title_li' => ''
+                    );
+
+                    ?>
+        <?php wp_list_pages($args); ?>
+    </ul>
+<?php } ?>
         <div class="anticorruption-sponsors">
             <p class="sponsor-label">Sponsored By</p>
             <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_ocp.png" alt="" />
@@ -19,12 +53,93 @@
     </div>
     <div class="[ column-9_12 sc_column_item ][ anticorruption-content ]">
         <div class="inner">
-            <h1>Anticorruption Open Data Package</h1>
-            <p>This practical resource provides references to identify the priority datasets, open standards and open data use-cases that governments, civil society and other stakeholders should focus on, in order to tackle corruption at all levels and to respond to increasingly complex corruption networks.</p>
-            <p class="next-section top-margin-big"><span class="text-right">NEXT</span></p>
-            <p class="next-section"><span class="text-right"><a href="<?php echo get_bloginfo( 'url' ); ?>/analytical-framework">Section 1: Analytical Framework</a></span></p>
+
+<?php echo get_post_field('post_content', $post->ID); ?>
+
+
+           <?php paginate_parent_children(); ?>
+
         </div>
     </div>
+
 </section>
 </section>
+
 <?php get_footer(); ?>
+
+<?php
+function paginate_parent_children( $parent = null ) {
+    global $post;
+
+    $child  = $post->ID;
+    $parent = ( null !== $parent ) ? $parent : $post->post_parent;
+
+    $children = get_pages( array(
+                'sort_column' => 'menu_order',
+                'sort_order'  => 'ASC',
+                'child_of'    => $parent
+                ) );
+
+    $pages = array( $parent );
+    foreach( $children as $page )
+        $pages[] += $page->ID;
+
+    if( ! in_array( $child, $pages ) && ! is_page( $parent ) )
+        return;
+
+    $current = array_search( $child, $pages );
+
+    $prev = $pages[$current-1];
+    $next = $pages[$current+1];
+
+    ?>
+    <?php
+        if ( empty( $prev ) && ! is_page( $parent ) ) :
+    ?>
+    <p class="previous-section top-margin-big"><span class="text-left">PREVIOUS</span></p>
+    <div class="previous-section"><span class="text-previous"><a href="<?php echo get_permalink( $parent ); ?>" title="<?php echo esc_attr( get_the_title( $parent ) ) ?>"><?php echo get_the_title( $parent ) ?></a></span></div>
+    <?php
+        elseif ( ! empty( $prev ) ) :
+    ?>
+    <p class="previous-section top-margin-big"><span class="text-left">PREVIOUS</span></p>
+    <div class="previous-section"><span class="text-left"><a href="<?php echo get_permalink( $prev ); ?>" title="<?php echo esc_attr( get_the_title( $prev ) ) ?>"><?php echo get_the_title( $prev ) ?></a></span></div>
+    <?php
+        endif;
+        if( ! empty( $next ) ) :
+    ?>
+    <p class="next-section top-margin-big"><span class="text-right">NEXT</span></p>
+    <div class="next-section"><span class="text-right"><a href="<?php echo get_permalink( $next ); ?>" title="<?php echo esc_attr( get_the_title( $next ) ) ?>"><?php echo get_the_title( $next ) ?></a></span></div>
+    <?php
+        endif;
+    ?>
+<?php }
+?>
+
+
+<?php
+// Get top ancestor
+function get_top_ancestor_id() {
+
+    global $post;
+
+    if ($post->post_parent) {
+        $ancestors = array_reverse(get_post_ancestors($post->ID));
+        return $ancestors[0];
+
+    }
+
+    return $post->ID;
+
+}
+
+// Does page have children?
+function has_children() {
+
+    global $post;
+
+    $pages = get_pages('child_of=' . $post->ID);
+    return count($pages);
+
+}
+
+?>
