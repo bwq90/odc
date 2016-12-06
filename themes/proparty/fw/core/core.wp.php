@@ -234,6 +234,17 @@ if (!function_exists('axiom_show_breadcrumbs')) {
 		$rez_period = apply_filters('axiom_filter_get_period_links', '', $type, $args['delimiter']);
 
 		if (!is_front_page()) {	// && !is_home()
+
+		    // Generates breadcrumb for Open Data Packages
+                    if ($type == 'page-open-data-package') {
+                        $title = get_post()->post_title;
+                        $top_title = get_the_title(get_top_ancestor_id());
+                        $rez_all = '<a class="breadcrumbs_item all" href="' . get_permalink( get_page_by_path('resource-centre') ) . '">Resource Centre</a>';
+                        if($title != $top_title) {
+                                $rez_parent =    '<a class="breadcrumbs_item all" href="' . get_permalink( get_page(get_top_ancestor_id()) ) . '">' . $top_title . '</a>';
+                        }
+                    }
+
 			$rez .= (isset($args['home']) && $args['home']!='' ? '<a class="breadcrumbs_item home" href="' . ($args['home_url'] ? $args['home_url'] : home_url()) . '">' . ($args['home']) . '</a>' . ($args['delimiter']) : '') 
 				. (!empty($rez_all)    ? ($rez_all)    . ($args['delimiter']) : '')
 				. (!empty($rez_level)  ? ($rez_level)  . ($args['delimiter']) : '')
