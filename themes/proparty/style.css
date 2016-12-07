@@ -4895,6 +4895,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .anticorruption-content > .inner                                    { padding: 20px 40px; }
 .anticorruption-content h1                                          { margin-bottom: 20px; font-family: "Raleway"; font-weight: 500; font-size: 34px; color: #00B9F1; }
 .anticorruption-content h2                                          { font-family: "Raleway"; font-size: 28px; color: #363842; }
+.anticorruption-content h3                                          { font-family: "Raleway"; font-size: 20px; color: #363842; margin-bottom: 0;}
 .anticorruption-content h3.subtitle                                 { margin-top: -30px; margin-bottom: 30px; font-family: "Raleway"; font-size: 20px; color: #696A71; }
 .anticorruption-content p,
 .anticorruption-content ul > li                                     { font-family: "Raleway"; font-size: 16px; font-weight: 300; line-height: 30px; color: #7C7D84; }
@@ -4920,4 +4921,3 @@ div#booking_calendar_select_label + .booking_cleardiv {
     .content .search_wrap .search_form_wrap .search_field                   { width: 68%; font-size: 12px; }
     .content .search_wrap .search_form_wrap .search_submit                  { width: 30%; font-size: 12px; top: 0; }
 }
-
