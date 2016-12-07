@@ -180,7 +180,7 @@ $video_bg_show  = axiom_get_custom_option('show_video_bg')=='yes' && (axiom_get_
 							</div>
 						<?php } ?>
 						<?php if ($show_title) { ?>
-							<h1 class="page_title <?php if ( is_page( 'resource-centre-results' ) || is_page( 'anticorruption' ) || is_page( 'analytical-framework' ) || is_page( 'challenge-corruption' ) ) echo "hidden" ?>">
+							<h1 class="page_title <?php if ( is_page( 'resource-centre-results' ) || is_page( 'agriculture-open-data-package' ) || is_page( 'anticorruption' ) || is_page( 'analytical-framework' ) || is_page( 'challenge-corruption' ) ) echo "hidden" ?>">
 								<?php if ( is_singular( array( 'resource' ) ) ) : ?>
 									Resource Centre
 								<?php else : ?>
@@ -208,10 +208,10 @@ $video_bg_show  = axiom_get_custom_option('show_video_bg')=='yes' && (axiom_get_
 				<?php
 				// Content and sidebar wrapper
 				if ( ! is_singular( array( 'resource' ) ) ){
-					if ($body_style!='fullscreen') axiom_open_wrapper('<div class="content_wrap">');
+					if ($body_style!='fullscreen' && !strstr(get_page_template_slug(),'open-data-package')) axiom_open_wrapper('<div class="content_wrap">');
 				}
 
-				if ( ! is_singular( array( 'resource' ) ) ){
+				if ( ! is_singular( array( 'resource' ) ) && !strstr(get_page_template_slug(),'open-data-package') ){
 					// Main content wrapper
 					axiom_open_wrapper('<div class="content">');
 				}
