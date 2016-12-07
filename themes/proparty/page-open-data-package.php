@@ -42,6 +42,7 @@ Template Name: Open Data Package
             <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_godan.png" alt="" />
             <p class="sponsor-label">Maintained by:</p>
             <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_odi.png" alt="" />
+            <p class="sponsor-label">Collaborative product of:</p>
             <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_open_data.png" alt="" />
 	</div>
     </div>
