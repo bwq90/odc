@@ -13,13 +13,14 @@ Template Name: Open Data Package
 <section id="anticorruption">
 <section class="[ columns_wrap sc_columns sc_columns_count_12 columns_fluid ][ anticorruption ]">
     <div class="[ column-3_12 sc_column_item ][ anticorruption-sidebar ]">
+      <div class="sidebar-container">
       <?php
 
               if ( has_children() OR $post->
       post_parent > 0 ) { ?>
 
           <ul>
-              <li class="active">
+              <li <?php if($post->post_parent == 0) echo 'class="active"' ?>>
               <a href="<?php echo get_the_permalink(get_top_ancestor_id()); ?>">
                   <?php echo get_the_title(get_top_ancestor_id()); ?>
               </a>
@@ -42,7 +43,8 @@ Template Name: Open Data Package
             <p class="sponsor-label">Maintained by:</p>
             <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_odi.png" alt="" />
             <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_open_data.png" alt="" />
-        </div>
+	</div>
+    </div>
     </div>
     <div class="[ column-9_12 sc_column_item ][ anticorruption-content ]">
         <div class="inner">
@@ -50,7 +52,7 @@ Template Name: Open Data Package
 <?php echo get_post_field('post_content', $post->ID); ?>
 
 
-            <?php paginate_parent_children(); ?>
+            <?php paginate_parent_children(0); ?>
 
         </div>
     </div>
@@ -82,37 +84,45 @@ function paginate_parent_children( $parent = null ) {
 
     $prev = $pages[$current-1];
     $next = $pages[$current+1];
+    $next_name = get_post($next)->post_name
 
     ?>
-    <p class="next-section top-margin-big">
-    <?php
-        if ( $parent != 0 && !empty( $prev ) ) echo 'PREVIOUS';
-        if( ! empty( $next ) ) :
-    ?>
-      <span class="text-right">NEXT</span>
-    <?php
-        endif;
-    ?>
-    </p>
 
-    <p class="next-section">
-
-    <?php
-        if ( $parent != 0 && !empty( $prev ) ) :
+	<p class="next-section top-margin-big">
+	<?php
+        if ( empty( $prev ) && ! is_page( $parent ) ) echo 'PREVIOUS';
+        elseif ( ! empty( $prev ) ) echo 'PREVIOUS';
+        if( ! empty( $next ) && $next_name!='homepage') :
     ?>
-      <span class="text-left"><a href="<?php echo get_permalink( $parent ); ?>" title="<?php echo esc_attr( get_the_title( $parent ) ) ?>"><?php echo get_the_title( $parent ) ?></a></span>
-    <?php
-        endif;
-        if( ! empty( $next ) ) :
-    ?>
-      <span class="text-right"><a href="<?php echo get_permalink( $next ); ?>" title="<?php echo esc_attr( get_the_title( $next ) ) ?>"><?php echo get_the_title( $next ) ?></a></span>
+    <span class="text-right">NEXT</span>
     <?php
         endif;
     ?>
-  </p>
+	</p>
 
 
-<?php } ?>
+	<p class="next-section">
+	<?php
+        if ( empty( $prev ) && ! is_page( $parent ) ) :
+    ?>
+    <span class="text-left"><a href="<?php echo get_permalink( $parent ); ?>" title="<?php echo esc_attr( get_the_title( $parent ) ) ?>"><?php echo get_the_title( $parent ) ?></a></span>
+    <?php
+        elseif ( ! empty( $prev ) ) :
+    ?>
+    <span class="text-left"><a href="<?php echo get_permalink( $prev ); ?>" title="<?php echo esc_attr( get_the_title( $prev ) ) ?>"><?php echo get_the_title( $prev ) ?></a></span>
+    <?php
+        endif;
+        if( ! empty( $next ) && $next_name!='homepage') :
+    ?>
+    <span class="text-right"><a href="<?php echo get_permalink( $next ); ?>" title="<?php echo esc_attr( get_the_title( $next ) ) ?>"><?php echo get_the_title( $next ) ?></a></span>
+    <?php
+        endif;
+    ?>
+	</p>
+
+<?php }
+?>
+
 </div>
 </div>
 <?php get_footer(); ?>
