@@ -4864,32 +4864,42 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .anticorruption-sidebar                                             { height: 100%; padding-right: 0 !important; background-color: #F6F6F6; }
 .anticorruption-sidebar .sidebar-container > ul                             { padding: 0; list-style: none; }
 .anticorruption-sidebar .sidebar-container > ul > li                        { margin-bottom: 0; padding-right: 50px; border-bottom: 1px solid #E4E4E4; line-height: 20px; background: url('images/ic-menu.png') no-repeat 95% 65%; }
-.anticorruption-sidebar .sidebar-container > ul > li > a                    { display: block; padding: 15px 10px; font-family: "Raleway"; font-size: 13px; color: #545454; }
+.anticorruption-sidebar .sidebar-container > ul > li > a                    { display: block; padding: 15px 10px; font-family: "Open Sans"; font-size: 13px; color: #545454; }
 .anticorruption-sidebar .sidebar-container > ul > li:hover,
+
 .anticorruption-sidebar .sidebar-container > ul > li.active,
 .anticorruption-sidebar .sidebar-container > ul > li.current_page_item,
 .anticorruption-sidebar .sidebar-container > ul > li.current_page_parent    { background: #363842 url('images/ic-menu-selected.png') no-repeat 95% 65%; }
+
+.anticorruption-sidebar .sidebar-container > ul > li.page_item_has_children.current_page_item { background-position: 95% 8% !important; }
 .anticorruption-sidebar .sidebar-container > ul > li.submenu				{ background-position: 95% 12%; }
+
 .anticorruption-sidebar .sidebar-container > ul > li.page_item_has_children { background-position: 95% 55%; }
+
 .anticorruption-sidebar .sidebar-container > ul > li.active > a,
 .anticorruption-sidebar .sidebar-container > ul > li.current_page_item > a,
 .anticorruption-sidebar .sidebar-container > ul > li.current_page_parent > a,
 .anticorruption-sidebar .sidebar-container > ul > li:hover > a              { color: #fff; }
 .anticorruption-sidebar .sidebar-container > ul > li > ul                   { margin-top: 0; margin-right: -50px; padding-left: 40px; background-color: #E7E7E7; list-style: disc; }
 .anticorruption-sidebar .sidebar-container > ul > li > ul > li              { margin-bottom: 0; padding: 15px 10px; border-bottom: 1px solid #E4E4E4; line-height: 20px; }
+
 .anticorruption-sidebar .sidebar-container > ul > li > ul > li.current_page_parent,
 .anticorruption-sidebar .sidebar-container > ul > li > ul > li.active,
 .anticorruption-sidebar .sidebar-container > ul > li > ul > li:hover        { background-color: transparent; }
-.anticorruption-sidebar .sidebar-container > ul > li > ul > li > a          { display: block; font-family: "Raleway"; font-size: 13px; color: #545454; }
+
+.anticorruption-sidebar .sidebar-container > ul > li > ul > li > a          { display: block; font-family: "Open Sans"; font-size: 13px; color: #545454; }
+
 .anticorruption-sidebar .sidebar-container > ul > li.current_page_parent > ul.children > li.current_page_item { font-weight: bold; }
+
 .anticorruption-sidebar .sidebar-container > ul > li > ul > li.current_page_parent > a,
 .anticorruption-sidebar .sidebar-container > ul > li > ul > li.active > a,
 .anticorruption-sidebar .sidebar-container > ul > li > ul > li:hover > a    { color: #545454; font-weight: bold; }
+
 .anticorruption-sidebar .sidebar-container > ul > li > ul.children          { display: none }
 .anticorruption-sidebar .sidebar-container > ul > li.current_page_item > ul.children,
 .anticorruption-sidebar .sidebar-container > ul > li.current_page_parent > ul.children { display: block }
 .anticorruption-sidebar .anticorruption-sponsors                    { text-align: center; }
-.anticorruption-sidebar .sponsor-label                              { margin-left: 20px; font-family: "Raleway"; font-size: 8px; color: #696A71; text-align: left; }
+.anticorruption-sidebar .sponsor-label                              { margin-left: 20px; font-family: "Raleway"; font-size: 9px; color: #696A71; text-align: left; }
 .anticorruption-sidebar .anticorruption-sponsors > img              { display: block; width: 130px; margin: 0 auto 20px; }
 .anticorruption-content                                             { margin-bottom: 30px; }
 .anticorruption-content > .inner                                    { padding: 20px 40px; }
@@ -4898,6 +4908,7 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .anticorruption-content h3                                          { font-family: "Raleway"; font-size: 20px; color: #363842; margin-bottom: 0;}
 .anticorruption-content h3.subtitle                                 { margin-top: -30px; margin-bottom: 30px; font-family: "Raleway"; font-size: 20px; color: #696A71; }
 .anticorruption-content p,
+.anticorruption-content ol > li,
 .anticorruption-content ul > li                                     { font-family: "Raleway"; font-size: 16px; font-weight: 300; line-height: 30px; color: #7C7D84; }
 .anticorruption-content p.next-section.top-margin-big               { margin-top: 150px; }
 .anticorruption-content p.next-section                              { margin-bottom: 0; font-family: "Raleway"; font-weight: bold; color: #000; overflow: hidden; }
@@ -4905,8 +4916,10 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .collapsible-box                                                    { width: 85%; margin: 20px auto; box-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
 .collapsible-box .box-title                                         { margin: 0; padding: 0 10px; background-color: #00B9F1; font-family: "Raleway"; font-size: 18px; font-weight: bold; color: #fff; line-height: 48px; cursor: pointer; }
 .collapsible-box .box-content                                       { padding: 20px; }
-.collapsible-box .box-content ul                                    { list-style: decimal; }
-.collapsible-box .box-content ul > li                               { font-family: "Raleway"; font-size: 16px; font-weight: 600; color: #00b9f1; }
+/*.collapsible-box .box-content ul                                    { list-style: decimal; }*/
+.collapsible-box .box-content ol > li,
+.collapsible-box .box-content ul > li                               { font-family: "Raleway"; font-size: 16px; font-weight: 600; }
+.collapsible-box .box-content ol > li > span,
 .collapsible-box .box-content ul > li > span                        { color: #7c7d84; font-weight: 300; }
 .collapsible-box .box-content table                                 { margin: 0 -20px -20px; }
 .collapsible-box .box-content table > tbody > tr > td               { padding: 20px; font-family: "Raleway"; font-size: 16px; font-weight: 300; color: #7C7D84; line-height: 30px; }
@@ -4921,3 +4934,4 @@ div#booking_calendar_select_label + .booking_cleardiv {
     .content .search_wrap .search_form_wrap .search_field                   { width: 68%; font-size: 12px; }
     .content .search_wrap .search_form_wrap .search_submit                  { width: 30%; font-size: 12px; top: 0; }
 }
+
