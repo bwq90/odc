@@ -4869,35 +4869,40 @@ div#booking_calendar_select_label + .booking_cleardiv {
 
 .anticorruption-sidebar .sidebar-container > ul > li.active,
 .anticorruption-sidebar .sidebar-container > ul > li.current_page_item,
-.anticorruption-sidebar .sidebar-container > ul > li.current_page_parent    { background: #363842 url('images/ic-menu-selected.png') no-repeat 95% 65%; }
-
-.anticorruption-sidebar .sidebar-container > ul > li.page_item_has_children.current_page_item { background-position: 95% 8% !important; }
-.anticorruption-sidebar .sidebar-container > ul > li.submenu				{ background-position: 95% 12%; }
-
-.anticorruption-sidebar .sidebar-container > ul > li.page_item_has_children { background-position: 95% 55%; }
-
+.anticorruption-sidebar .sidebar-container > ul > li.current_page_parent,
+.anticorruption-sidebar .sidebar-container > ul > li.current_page_ancestor                          { background: #363842 url('images/ic-menu-selected.png') no-repeat 95% 65%; }
+.anticorruption-sidebar .sidebar-container > ul > li.page_item_has_children.current_page_item,
+.anticorruption-sidebar .sidebar-container > ul > li.page_item_has_children.current_page_ancestor   { background-position: 95% 8% !important; }
+.anticorruption-sidebar .sidebar-container > ul > li.submenu				                                { background-position: 95% 12%; }
+.anticorruption-sidebar .sidebar-container > ul > li.page_item_has_children                         { background-position: 95% 55%; }
 .anticorruption-sidebar .sidebar-container > ul > li.active > a,
 .anticorruption-sidebar .sidebar-container > ul > li.current_page_item > a,
 .anticorruption-sidebar .sidebar-container > ul > li.current_page_parent > a,
-.anticorruption-sidebar .sidebar-container > ul > li:hover > a              { color: #fff; }
-.anticorruption-sidebar .sidebar-container > ul > li > ul                   { margin-top: 0; margin-right: -50px; padding-left: 40px; background-color: #E7E7E7; list-style: disc; }
-.anticorruption-sidebar .sidebar-container > ul > li > ul > li              { margin-bottom: 0; padding: 15px 10px; border-bottom: 1px solid #E4E4E4; line-height: 20px; }
-
+.anticorruption-sidebar .sidebar-container > ul > li.current_page_ancestor > a,
+.anticorruption-sidebar .sidebar-container > ul > li:hover > a                                      { color: #fff; }
+.anticorruption-sidebar .sidebar-container > ul > li > ul                                           { margin-top: 0; margin-right: -50px; padding-left: 40px; background-color: #E7E7E7; list-style: disc; }
+.anticorruption-sidebar .sidebar-container > ul > li > ul > li                                      { margin-bottom: 0; padding: 15px 10px; border-bottom: 1px solid #E4E4E4; line-height: 20px; }
 .anticorruption-sidebar .sidebar-container > ul > li > ul > li.current_page_parent,
 .anticorruption-sidebar .sidebar-container > ul > li > ul > li.active,
-.anticorruption-sidebar .sidebar-container > ul > li > ul > li:hover        { background-color: transparent; }
-
-.anticorruption-sidebar .sidebar-container > ul > li > ul > li > a          { display: block; font-family: "Open Sans"; font-size: 13px; color: #545454; }
-
-.anticorruption-sidebar .sidebar-container > ul > li.current_page_parent > ul.children > li.current_page_item { font-weight: bold; }
-
-.anticorruption-sidebar .sidebar-container > ul > li > ul > li.current_page_parent > a,
+.anticorruption-sidebar .sidebar-container > ul > li > ul > li:hover                                { background-color: transparent; }
+.anticorruption-sidebar .sidebar-container > ul > li > ul > li                                      { list-style: none; }
+.anticorruption-sidebar .sidebar-container > ul > li > ul > li > ul > li                            { list-style: disc; padding-left: 10px;}
+.anticorruption-sidebar .sidebar-container > ul > li > ul > li > a,
+.anticorruption-sidebar .sidebar-container > ul > li > ul > li > ul > li > a                        { display: block; font-family: "Open Sans"; font-size: 13px; color: #545454; }
+.anticorruption-sidebar .sidebar-container > ul > li.current_page_parent > ul.children > li.current_page_item,
+.anticorruption-sidebar .sidebar-container > ul > li.current_page_ancestor > ul.children > li.current_page_parent,
+.anticorruption-sidebar .sidebar-container > ul > li.current_page_ancestor > ul.children > li.current_page_parent > ul.children > li.current_page_item      { font-weight: bold; }
 .anticorruption-sidebar .sidebar-container > ul > li > ul > li.active > a,
-.anticorruption-sidebar .sidebar-container > ul > li > ul > li:hover > a    { color: #545454; font-weight: bold; }
-
-.anticorruption-sidebar .sidebar-container > ul > li > ul.children          { display: none }
+.anticorruption-sidebar .sidebar-container > ul > li > ul > li:hover > a,
+.anticorruption-sidebar .sidebar-container > ul > li > ul > li.current_page_parent > a              { color: #545454; font-weight: bold; }
+.anticorruption-sidebar .sidebar-container > ul > li > ul.children,
+.anticorruption-sidebar .sidebar-container > ul > li > ul.children > li > ul.children                                                           { display: none }
+.anticorruption-sidebar .sidebar-container > ul > li.current_page_ancestor > ul.children,
 .anticorruption-sidebar .sidebar-container > ul > li.current_page_item > ul.children,
-.anticorruption-sidebar .sidebar-container > ul > li.current_page_parent > ul.children { display: block }
+.anticorruption-sidebar .sidebar-container > ul > li.current_page_parent > ul.children,
+.anticorruption-sidebar .sidebar-container > ul > li.current_page_parent > ul.children > li.current_page_item > ul.children,
+.anticorruption-sidebar .sidebar-container > ul > li.current_page_ancestor > ul.children > li.current_page_parent > ul.children                 { display: block }
+
 .anticorruption-sidebar .anticorruption-sponsors                    { text-align: center; }
 .anticorruption-sidebar .sponsor-label                              { margin-left: 20px; font-family: "Raleway"; font-size: 9px; color: #696A71; text-align: left; }
 .anticorruption-sidebar .anticorruption-sponsors > img              { display: block; width: 130px; margin: 0 auto 20px; }
@@ -4934,4 +4939,3 @@ div#booking_calendar_select_label + .booking_cleardiv {
     .content .search_wrap .search_form_wrap .search_field                   { width: 68%; font-size: 12px; }
     .content .search_wrap .search_form_wrap .search_submit                  { width: 30%; font-size: 12px; top: 0; }
 }
-
