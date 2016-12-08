@@ -4930,7 +4930,9 @@ div#booking_calendar_select_label + .booking_cleardiv {
 .anticorruption-content p.next-section                              { margin-bottom: 0; font-family: "Raleway"; font-weight: bold; color: #000; overflow: hidden; }
 .anticorruption-content p.next-section a                            { display: block; font-family: "Raleway"; font-size: 16px; font-weight: 300; color: #00B9F1; }
 .collapsible-box                                                    { width: 100%; margin: 20px auto; box-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
-.collapsible-box .box-title                                         { margin: 0; padding: 0 10px; background-color: #00B9F1; font-family: "Raleway"; font-size: 18px; font-weight: bold; color: #fff; line-height: 48px; cursor: pointer; }
+.collapsible-box .box-title                                         { margin: 0; padding: 0 10px; background: #00B9F1 url('images/ic-menu-selected.png') no-repeat 95% 65%; font-family: "Raleway"; font-size: 18px; font-weight: bold; color: #fff; line-height: 48px; cursor: pointer; }
+.collapsible-box .box-title.closed                                  { -moz-transform: scaleY(-1); -o-transform: scaleY(-1); -webkit-transform: scaleY(-1); transform: scaleY(-1); filter: FlipV; -ms-filter: "FlipV"; }
+.collapsible-box .box-title.closed span                             { display: block; -moz-transform: scaleY(-1); -o-transform: scaleY(-1); -webkit-transform: scaleY(-1); transform: scaleY(-1); filter: FlipV; -ms-filter: "FlipV"; }
 .collapsible-box .box-content                                       { padding: 20px; }
 /*.collapsible-box .box-content ul                                    { list-style: decimal; }*/
 .collapsible-box .box-content ol > li,

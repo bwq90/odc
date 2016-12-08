@@ -31,7 +31,7 @@
             <h3 class="subtitle">Where’s our starting point?</h3>
             <p>There are many definitions of corruption in use around the world, some more detailed or precise than others. These definitions vary across different countries and legal systems. As a global reference –and as a starting point for this resource– Transparency International defines corruption as “the abuse of entrusted power for private gain”. This short but widely accepted definition contrasts with the broad array of forms that an act of corruption can take: from bribes to local officials, to sophisticated financial schemes for transfer mispricing or tax evasion.</p>
             <div id="collapse-box" class="collapsible-box">
-                <h3 class="box-title">Box 1. Is it possible to classify corruption?</h3>
+                <h3 class="box-title"><span>Box 1. Is it possible to classify corruption?</span></h3>
                 <div class="box-content">
                     <p>Different scholars and practitioners have tried to propose analytical categories to understand and investigate corruption. Depending on the angle and objectives of the researcher, categories of corruption vary. Transparency International have identified at least three broad categories that allow to group and analyze certain acts of corruption:</p>
                     <ul>
@@ -45,7 +45,7 @@
             <p>As institutional and legal frameworks are adjust and improve to reduce spaces for corruption, these networks also adjust and increase their sophistication and complexity. Analytical approaches to understand the changing dynamics of corruption networks are diverse. Often, only some parts of the network are ‘visible’, or in the reach of particular authorities. As a result, a wide range of conventions, laws, policies, or mechanisms intended to reduce risks and impact of corruption schemes have been designed and implemented across the world. Some of them with better impact than others. Open data could play a key role, enhancing the effectiveness of this set of anti-corruption tools.</p>
             <p>In 2014, the G20 Anti-Corruption Working Group (ACWG) recognised the importance of open data as an emerging resource that could be used to address corruption, highlighting its potential to follow financial flows, open up public contracting and procurement, change incentives in corruption-prone environments, and to enable cross-sector collaboration. From extractives and aid, to procurement and political finance, initiatives have turned to open data, as a powerful tool to identify, and ultimately dismantle, corruption networks.</p>
             <div id="collapse-box" class="collapsible-box">
-                <h3 class="box-title">Box 2. Corruption: a global agenda</h3>
+                <h3 class="box-title"><span>Box 2. Corruption: a global agenda</span></h3>
                 <div class="box-content">
                     <p>In the last two decades, corruption has been a headline issues in the global agenda. Government leaders, civil society organizations, private sector leaders and international agencies have highlighted the effects of corruption on global stability and inclusive development. Several global initiatives have called for robust and sound legal frameworks that deals with corruption issues, such as bribery, as well as spaces for coordination among governments and institutions. As a response, the global community has reached specific agreements and commitments to fight and control corruption. Some of them are:</p>
                     <ul>
@@ -60,7 +60,7 @@
             <p>Many of the activities of a corruption network, and many of the individuals and organisations involved, leave their mark on government held datasets. Paradoxically, corruption schemes frequently rely upon the law to secure ownership of companies, land and assets used to launder their proceeds: although they seek secrecy by using shell companies and complex ownership networks. Public contracts, spending and other transactions are all recorded in government ledgers. And existing policies may call for asset disclosures and interest registers to be maintained.</p>
             <p>Whilst all this information remains in silos, identifying, tracking and confronting corruption networks remains a laborious task. If more data is made available and interoperable (increasing the ability to find connections between datasets), it should be possible to adjust and improve different anti-corruption strategies faster, as well as to strengthen anti-corruption initiatives implemented either by governments or civil society organizations.</p>
             <div id="collapse-box" class="collapsible-box">
-                <h3 class="box-title">Box 3. What is Open Government Data?</h3>
+                <h3 class="box-title"><span>Box 3. What is Open Government Data?</span></h3>
                 <div class="box-content">
                     <p>During the past years, the open data agenda has grown significantly. Facilitated by technology and digital media, what started being a technical and specialized discussion has now become a global movement. The International Open Data Charter (IODC) defines open data as “digital data that is made available with the technical and legal characteristics necessary for it to be freely used, reused, and redistributed by anyone, anytime, anywhere”. Many governments around the world have embraced this agenda, recognizing the value of open data “to advance collaboration around key social challenges, provide effective public oversight of government activities, and support innovation, sustainable economic development, and the creation and expansion of effective, efficient public policies and programs”.</p>
                     <p><small>For more information visit the International Open Data Charter “Resource Center”<br />at: <a href="www.opendatacharter.net/resource-centre/" alt="Resource Centre">www.opendatacharter.net/resource-centre/</a></small></p>
@@ -76,7 +76,7 @@
                 <li>Data standards. Standards describe what should be published, and the technical details of how it should be made available. They play a key role in bringing about data interoperability.</li>
             </ul>
             <div id="collapse-box" class="collapsible-box">
-                <h3 class="box-title">Box 4. Developing the Anti-Corruption Open Data Package</h3>
+                <h3 class="box-title"><span>Box 4. Developing the Anti-Corruption Open Data Package</span></h3>
                 <div class="box-content">
                     <p>The Anti-Corruption Open Data Package was developed through four core activity tracks. These were carried out simultaneously and are interconnected, as information gathered in the four of them contributed with ideas, experiences and databases to shape this resource. This work was complemented by a range of workshops, and engagement around the 2016 Anti-Corruption Summit in London.</p>
                     <table>
