@@ -908,7 +908,9 @@ Samsung Galaxy
 }
 @media (max-width: 799px) {
 	/* Breadcrumbs */
-	.page_top_wrap.page_top_title .breadcrumbs {display: none;}
+	.page_top_wrap.page_top_title .breadcrumbs {display: block; padding: 0;}
+
+	.page_top_wrap .breadcrumbs .breadcrumbs_item { font-size: 10px; }
 
 	/* Countdown */
 	.sc_countdown.sc_countdown_style_2 .sc_countdown_digits, .sc_countdown.sc_countdown_style_2 .sc_countdown_separator {
@@ -1431,7 +1433,7 @@ Very common low res
 	}
 	.page_top_wrap.page_top_title .breadcrumbs {
 		max-width: 100%;
-		padding: 1.5em 0 0 0;
+		padding: 0 0 0 0;
 	}
 
 	/* Posts layouts */

@@ -4949,12 +4949,14 @@ div#booking_calendar_select_label + .booking_cleardiv {
   .anticorruption-content > .inner                                    { padding: 20px 0px; }
 }
 
-
 @media (max-width: 420px) {
     .hidden-xs                      { display: none; }
     .cont-filters .principle-filter { width: calc(50% - 10px); }
+    .content_wrap                   { width: 100% !important; }
+    .footer_wrap > .content_wrap    { width: 90% !important; }
     #featured-resources .resource-centre-results__section .resource-result  { margin-bottom: 20px; }
     .content .search_wrap .search_form_wrap .search_field_container         { width: 100%; }
     .content .search_wrap .search_form_wrap .search_field                   { width: 68%; font-size: 12px; }
     .content .search_wrap .search_form_wrap .search_submit                  { width: 30%; font-size: 12px; top: 0; }
+    .anticorruption-content > .inner                                        { padding: 15px; }
 }
