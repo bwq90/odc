@@ -255,7 +255,7 @@ $( document ).ready( function () {
         e.preventDefault();
         var el  = $( e.currentTarget );
 
-        el.parent().find( '.box-content' ).slideToggle();
+        el.toggleClass( 'closed' ).parent().find( '.box-content' ).slideToggle();
 
         return false;
     });
