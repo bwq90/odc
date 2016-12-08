@@ -44,7 +44,7 @@ Template Name: Open Data Package
             <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_odi.png" alt="" />
             <p class="sponsor-label">Collaborative product of:</p>
             <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_open_data.png" alt="" />
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf09JJtQkohtHOqaxKxeLyXSUiPDaihkWfN0Q6ZFeuQ5BH97g/viewform" class="doc-link" target="_blank">Contribute</a>
+            <a href="https://docs.google.com/document/d/1DrLlmnzsadroW16mwLyOWhNa1ABk_qeRQZ9PbmeCLzQ/edit" class="doc-link" target="_blank">Contribute</a>
 	</div>
     </div>
     </div>
@@ -92,8 +92,11 @@ function paginate_parent_children( $parent = null ) {
 
 	<p class="next-section top-margin-big">
 	<?php
-        if ( empty( $prev ) && ! is_page( $parent ) ) echo 'PREVIOUS';
-        elseif ( ! empty( $prev ) ) echo 'PREVIOUS';
+        if(get_post()->post_name != 'agriculture-open-data-package') :
+          if ( empty( $prev ) && ! is_page( $parent ) ) echo 'PREVIOUS';
+          elseif ( ! empty( $prev ) ) echo 'PREVIOUS';
+        endif;
+
         if( ! empty( $next ) && $next_name!='homepage') :
     ?>
     <span class="text-right">NEXT</span>
@@ -105,14 +108,16 @@ function paginate_parent_children( $parent = null ) {
 
 	<p class="next-section">
 	<?php
-        if ( empty( $prev ) && ! is_page( $parent ) ) :
+        if(get_post()->post_name != 'agriculture-open-data-package') :
+          if ( empty( $prev ) && ! is_page( $parent ) ) :
     ?>
     <span class="text-left"><a href="<?php echo get_permalink( $parent ); ?>" title="<?php echo esc_attr( get_the_title( $parent ) ) ?>"><?php echo get_the_title( $parent ) ?></a></span>
     <?php
-        elseif ( ! empty( $prev ) ) :
+          elseif ( ! empty( $prev ) ) :
     ?>
     <span class="text-left"><a href="<?php echo get_permalink( $prev ); ?>" title="<?php echo esc_attr( get_the_title( $prev ) ) ?>"><?php echo get_the_title( $prev ) ?></a></span>
     <?php
+          endif;
         endif;
         if( ! empty( $next ) && $next_name!='homepage') :
     ?>
