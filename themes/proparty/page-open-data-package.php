@@ -44,7 +44,7 @@ Template Name: Open Data Package
             <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_odi.png" alt="" />
             <p class="sponsor-label">Collaborative product of:</p>
             <img src="<?php bloginfo('template_directory'); ?>/images/logos/logo_open_data.png" alt="" />
-            <a href="https://docs.google.com/document/d/1DrLlmnzsadroW16mwLyOWhNa1ABk_qeRQZ9PbmeCLzQ/edit" class="doc-link" target="_blank">Contribute</a>
+            <a href="mailto:enquiries@godan.info" class="doc-link" target="_blank">Contribute</a>
 	</div>
     </div>
     </div>
